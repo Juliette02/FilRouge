@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits{% endblock %}
+
+{% block produit %}
+
+    {# <a href="{{ path('rubrique') }}">Rurbiques</a> #}
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('app_produit_new') }}" class="btn btn-outline-info mt-2">Ajouter un produit</a>
+    {% endif %}
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('sousRubrique', {'id':rub.rubrique.id }) }}">{{ rub.rubrique.nom}}<i class="fa-solid fa-angle-right mx-2"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link disabled" aria-current="page" href="#">{{ rub.nom }}</a>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        {% for produit in produits %}
+        <div class="offset-2">
+           <div class="card mt-3 mb-3 mx-5 col-9 rounded-pill border border-dark shadow p-3 mb-5 bg-body rounded">
+                <div class="row g-0 d-flex">
+                    <div class="col-md-4">
+                        <img src="/upload/img/produit/{{ produit.photo }}" class="img-fluid rounded-pill" alt="{{ produit.libelleCourt }}">
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title fs-3 fw-bold">{{ produit.libelleCourt }}</h5>
+                            <p class="card-text fs-1 fw-bold"><small class"text-muted">{{ produit.prixHorsTaxe }}€</small></p>
+                        </div>
+                         
+                                            
+                        <a class="btn btn-primary mt-5" href="{{ path('app_produit_show', {'id': produit.id}) }}">Détail</a>
+                        <a href="{{ path('cart_add', {'id': produit.id }) }}" class="btn btn-info text-white mt-5"> Ajouter </a> 
+                        {# {'idi': produit.id} Récupère le chemin pour afficher le produit par son id #}
+                        {# <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">Modifier</a> #}
+                        {# {'idi': produit.id} Récupère le chemin pour afficher le produit par son id #}
+                    </div>
+                </div>
+           </div>
+        </div>       
+            
+        {% else %}
+           
+                <div colspan="8">Aucun résultat pour votre recherche
+                    {# Au cas ou il ne trouve pas de produit #}
+                </div>
+        {% endfor %}
+
+
+
+{% endblock %}

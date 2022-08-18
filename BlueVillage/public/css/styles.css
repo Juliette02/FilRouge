@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato' , 'sans-serif';
+    max-width: 100%;
+}
+
+.bg{
+    background-color: #F3F3F3;
+    width: 100%;
+}
+
+#bgproduit{
+    overflow-x: hidden;
+}
+/* ***************************************************************************************************************
+********************************************     HEADER     ******************************************************
+*****************************************************************************************************************/
+
+.container1{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+}
+
+.container1 .navmilieu{
+    width: 40vw;
+}
+
+.container1 .navmilieu a{
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: #17C4FB;
+    font-weight: 700;
+    -webkit-text-stroke: 1px black;
+    text-decoration: none;
+    text-shadow: 0 5px 10px black;
+
+}
+
+.container1 .navmilieu a:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+}
+
+.container1 .navmilieu input{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #17C4FB;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#homehidden{
+    visibility: hidden;
+}
+.container1 .navgauche ul,
+.container1 .navdroite ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+.container1 .navgauche{
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+.container1 .navdroite{
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.container1 i{
+    padding-left: 1vw;
+    font-size: 30px;
+}
+
+.container1 a{
+    color: #1797BF;
+}
+
+.container1 i:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+}
+
+
+/* ***************************************************************************************************************
+********************************************     NAVBAR     ******************************************************
+*****************************************************************************************************************/
+
+#rubriques{
+    border-top: 2px solid #1797BF;
+    border-bottom: 2px solid #1797BF;
+}
+
+#rubriques ul{
+    display: inline-flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+#rubriques li a{
+    display: flex;
+    text-align: center;
+    padding-left: 3vw;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#rubriques li button{
+    display: flex;
+    text-align: center;
+    padding-left: 3vw;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#rubriques li:hover a{
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+/* ***************************************************************************************************************
+*******************************************     CATEGORIES     ***************************************************
+*****************************************************************************************************************/
+
+#hr{
+    margin: 0 auto;
+}
+
+.mainrubrique{
+    width: 100vw;
+    height: auto;
+}
+
+.maintitle{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    color: #17C4FB;
+}
+
+.maintitle h2{
+    font-size: 48px;
+    font-weight: 700;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0 5px 30px #8a8a8a;
+}
+
+.cardcomplete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
+    margin: 2%;
+}
+
+.cardrubrique{
+    position: relative;
+    width: 320px;
+    height: 300px;
+    box-shadow: inset 5px 5px 5px rgb(0, 0, 0),
+                inset -5px -5px -5px rgb(128, 128, 128),
+                5px 5px 5px rgb(0, 0, 0),
+                -5px -5px -5px rgb(128, 128, 128);
+    border-radius: 50%;
+    margin: 30px;
+}
+
+.cardcontent{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardcontent img{
+    width: 140px;
+    height: auto;
+    text-align: center;
+    color: #17C4FB;
+    text-decoration: none;
+}
+
+.cardcontent h2{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #17C4FB;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cardrubrique:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+/* ***************************************************************************************************************
+******************************************     PRODUITS PHARES     ***********************************************
+*****************************************************************************************************************/
+
+.mainproduitphare{
+    margin-top: 5%;
+}
+
+.cardcompletephare{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
+    margin: 2%;
+    margin-bottom: 0;
+
+}
+
+.cardphare1{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    box-shadow: inset 5px 5px 5px rgb(0, 0, 0),
+                inset -5px -5px -5px rgb(128, 128, 128),
+                5px 5px 5px rgb(0, 0, 0),
+                -5px -5px -5px rgb(128, 128, 128);
+    border-radius: 5%;
+    margin: 30px;
+}
+
+.cardphare1 a{
+    text-decoration: none;
+}
+
+.cardphare2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, rgba(255,255,255,1) 25%, #ffffff 100%);
+    text-decoration: none;
+}
+
+.cardphare2 img{
+    width: 140px;
+    height: auto;
+    text-align: center;
+    color: #17C4FB;
+    text-decoration: none;
+}
+
+.cardphare1:hover img{
+    transform: scale(1.30);
+    transition: 0.5s ease-in-out;
+}
+
+
+.cardphare2 h2{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #17C4FB;
+    font-size: 20px;
+}
+
+.cardphare2 h3{
+    padding-top: 10%;
+    font-size: 22px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.cardphare3{
+    display: inline-flex;
+    text-align: center;
+}
+
+.cardphare3 h3{
+    position: relative;
+    display: inline-block;
+    padding: 20px 20px;
+    margin-top: 190%;
+    margin-left: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.cardphare3 a:hover{
+    text-decoration: none;
+}
+
+
+/* ***************************************************************************************************************
+********************************************     FOOTER     ******************************************************
+*****************************************************************************************************************/
+
+
+.footer{
+    margin-top: auto;
+    padding: 15px;
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 30vh;
+    width: 100%; 
+    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, #F3F3F3 90%, #F3F3F3 100%);
+    /* bottom: 0; */
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footergauche li{
+    font-size: 24px;
+}
+
+.footergauche a{
+    color:black;
+    text-decoration: none;
+}
+
+.footergauche a:hover i{
+    transform: scale(1.25);
+    transition: 0.5s ease-in-out;
+}
+
+.footermilieu li,
+.footerdroite li{ 
+    font-size: 50px;
+}
+
+.footergauche{
+    width: 25vw;
+    color:rgb(0, 0, 0);
+    margin-left: 5%;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.footermilieu{
+    width: 25vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footermilieu ul{
+    padding: 10%;
+}
+
+
+.footerdroite{
+    width: 25vw;
+}
+
+.footerdroite li{
+    padding: 5%;
+    display: inline-block;
+}
+
+.footerdroite a{
+    color: black;
+}
+
+.footerdroite a:hover i{
+    transform: scale(1.20);
+    transition: 0.5s ease-in-out;
+}
+
+#detailproduitcom{
+    overflow-x: hidden;
+    background-color: white;
+}
+
+#detailproduitcom h1{
+    padding-left: 15%;
+}
+
+#detailproduit{
+    position: fixed;
+    right: 0;
+} 
+
+
+.table1{
+    background-color: red;
+}
+
+
+/* ***************************************************************************************************************
+********************************************     PANIER     ******************************************************
+*****************************************************************************************************************/
+
+#bgpanier{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%, rgb(243,243,243,1) 100%);
+}
+
+#titrepanier{
+    font-size: 48px;
+    color: #17C4FB;
+    font-weight: 700;
+    -webkit-text-stroke: 1px black;
+    margin-left: 2%;
+    margin-top: 2%;
+
+}
+
+.cardpanier{
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgb(206, 206, 206);
+}
+
+.cardpanier p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5%;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cardpanier button{
+    width: 25%;
+    height: auto;
+    border-radius: 50px;
+    color: white;
+    background: #1797BF;
+    border: 2px solid #1797BF;
+}
+
+.cardpanier .divpayer{
+    text-align: center;
+}
+
+ .paniervide, #bodylogin{
+    min-height: 20vh;
+} 
+
+.paniervide{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.cardpaniervide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 2px solid #1797BF;
+    border-radius: 20px;
+}
+
+.panierfooter{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.panierfooter1{
+    width: 40%;
+}
+
+.panierfooter1 i{
+    padding-right: 5%;
+}
+
+.panierfooter1 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-size:24px;
+}
+
+.panierfooter1 a:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+}
+
+.panierfooter hr{
+    width: 100%;
+}
+
+.panierfooterbot{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.panierfooter2{
+    width: 90%;
+}
+
+.panierfooter2 i{
+    padding-right: 5%;
+}
+
+.panierfooter2 a{
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-size:24px;
+}
+
+.panierfooter2 li:hover i{
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+}
+
+.panierfooter2 hr{
+    width: 100%;
+}
+.panierfooter2 ul{
+    list-style-type: none;
+}
+.panierfooter2 h3{
+    color:#17C4FB;
+    font-size: 38px;
+    -webkit-text-stroke: 1px black;
+}
+
+.panierfooter2 p{
+    font-size: 22px;
+}
+
+.panierfooter2 ul li ul {
+    display:none;
+    margin-left:0;
+    margin-bottom:9px;
+    padding-left:0px;
+}
+
+.panierfooter2 ul {
+    margin-left:0;
+    margin-bottom:9px;
+}
+
+.panierfooter2 ul li:focus ul {
+    display:block;
+}
+
+li[tabindex]>a {
+    pointer-events:none;
+}
+
+li[tabindex]:before {
+     content:'+';
+     float:right;
+     padding-right:0.5em;
+     font-weight:bold;
+     color:white;
+     font-size:120%;
+     line-height:26px;
+}
+
+li[tabindex]:focus:before {
+     content:'-';
+}
+
+li:focus {
+       pointer-events:none;
+}
+/* referme le menu */
+
+li:focus ul li a {
+       pointer-events:auto;
+}
+/* maintient l'interaction des liens de sous menu avec la souris*/
+
+
+/* ***************************************************************************************************************
+*****************************************     MEDIA QUERIES       ************************************************
+*****************************************************************************************************************/
+
+
+
+@media all and (max-width: 480px){
+
+    .navmilieu a{
+        text-align: center;
+    }
+
+    .container1{
+        height: 30vh;
+    }
+
+    .maintitle{
+        text-align: center;
+    }
+
+    .footer{
+        display: inline-flex;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footergauche, .footermilieu, .footerdroite{
+        width: 100%;
+    }
+
+    .footerdroite{
+        text-align: center;
+    }
+
+    .cardpanier .btnpayer{
+        width: 100%;
+    }
+
+    #bodypanier{
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .cardpanier{
+        width: 200px;
+    }
+
+    #carouselExampleCaptions p,
+    #carouselExampleCaptions h5 {
+        font-size: 15px;
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 720px){
+
+    .navmilieu a{
+        text-align: center;
+    }
+
+    .container1{
+        height: 30vh;
+    }
+
+    .footer{
+        display: inline-flex;
+        height: 70vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footergauche, .footermilieu, .footerdroite{
+        width: 100%;
+    }
+
+    .footerdroite{
+        text-align: center;
+    }
+
+    
+    .cardpanier .btnpayer{
+        width: 50%;
+    }
+
+    #carouselExampleCaptions p,
+    #carouselExampleCaptions h5 {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (min-width: 720px) and (max-width: 1360px){
+
+    .navmilieu a{
+        text-align: center;
+    }
+
+    .container1{
+        height: 30vh;
+    }
+
+    #navitem a{
+        font-size: 16px;
+    }
+
+    .footer{
+        height:40vh;
+    }
+
+    .footergauche li{
+        font-size: 20px;
+    }
+
+    .footermilieu li,
+    .footerdroite li{ 
+        font-size: 30px;
+    }
+
+    .cardpanier .btnpayer{
+        width: 50%;
+    }
+
+    #carouselExampleCaptions p,
+    #carouselExampleCaptions h5 {
+        font-size: 30px;
+    }
+}  
+
