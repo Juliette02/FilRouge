@@ -1,0 +1,73 @@
+id_pro          INT AUTO-INCREMENT      Numéro d'identification du produit
+lib_cou_pro     varchar(255)            Libellé court du produit
+lib_lon_pro     varchar(255)            Libellé long du produit
+ref_fou_pro     varchar(255)            Référence fournisseur du produit
+pho_pro         varchar(255)            Photo du produit
+pri_ach_pro     DECIMAL(19,4)           Prix d'achat du produit
+pri_ht_pro      DECIMAL(19,4)           Prix hors taxes du produit
+ctg_pro         VARCHAR(255)            Catégorie du produit
+id_rub          INT                     Numéro de la rubrique du produit
+id_liv          INT                     Numéro d'identification du livreur
+id_fou          INT                     Numéro d'identification du fournisseur
+
+
+id_cli          INT AUTO-INCREMENT      Numéro d'identification du client
+cat_cli         varchar(255)            Catégorie du client
+adr_liv_cli     varchar(255)            Adresse de livraison du client
+adr_fac_cli     varchar(255)            Adresse de facturation du client
+mod_pai_cli     varchar(255)            Mode de paiement du client
+red_cli         DECIMAL(5,2)            Réduction client
+coe_cli         DECIMAL(5,2)            Coefficient du client
+num_sir_cli     VARCHAR(255)            Numéro de siret si entreprise
+nom_cli         VARCHAR(255)            Nom du client
+pre_cli         VARCHAR(255)            Prénom du client
+nom_ent_cli     VARCHAR(255)            Nom de l'entreprise
+
+
+id_com          INT AUTO-INCREMENT      Numéro d'identification du commercial
+nom_com         varchar(255)            Nom du commercial
+pre_com         varchar(255)            Prénom du commercial
+adr_com         VARCHAR(255)            adresse du commercial
+ema_com         varchar(255)            email du commercial
+tel_com         varchar(255)            telephone du commercial
+
+
+id_fou          INT AUTO-INCREMENT      Numéro d'identiiant du fournisseur
+nom_fou         varchar(255)            Nom du fournisseur
+adr_fou         varchar(255)            Adresse du fournisseur
+ema_fou         varchar(255)            email du fournisseur
+tel_fou         varchar(255)            telephone du fournisseur
+
+
+id_cat          INT AUTO-INCREMENT      Numéro d'identification du catalogue
+sto_cat         INT                     Stock disponible
+nvx_pro_cat     varchar(255)            Noms des nouveaux produits
+des_pro_cat     varchar(255)            Noms des produits désactivés
+
+
+id_fac          INT AUTO-INCREMENT      Numéro d'dentification de la facture
+dat_fac         DATE                    Date de la facture
+id_cli          INT                     Numéro d'identification du client
+id_cmd          INT                     Numéro de commande
+adr_fac         varchar(255)            adresse de facturation
+
+
+id_liv          INT AUTO-INCREMENT      Numéro d'identificcation de la livraison
+qte_pro_liv     INT                     Quantité du produit livré
+dat_liv         DATE                    Date de livraison
+
+
+id_cmd          INT AUTO-INCREMENT      Numéro d'identification de la commande
+dat_cmd         DATE                    Date de commande
+adr_liv_cmd     varchar(255)            Adresse de la livraison de la commande
+adr_fac_cmd     varchar(255)            Adresse de la facturation de la commande
+tot_cmd         DECIMAL(19,4)           Prix total de la commande
+
+id_rub          INT AUTO_INCREMENT      Numéro d'identification de la rubrique
+nom_rub         VARCHAR(255)            Nom de la rubrique
+
+
+qte_art         INT                     Quantité d'article dans la commande
+pri_ven         DECIMAL(19,4)           Prix de vente du produit (HT+Coefficient)
+tva_pro         DECIMAL(5,2)            TVA appliquée au produit
+

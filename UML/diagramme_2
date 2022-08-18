@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" modified="2022-06-09T11:59:24.308Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="W4bwlU8fK62J5SYesNUW" version="19.0.1" type="github" pages="2">
+  <diagram id="DiO1FB-chMHH5-HHLX33" name="Page-1">
+    <mxGraphModel dx="1498" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="szvbojdEr7eZIrvB9NSX-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4" width="820" height="2330" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-2" value="Cas d&#39;utilisation lors d&#39;un achat sur le site" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="10" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-3" value="Flux d&#39;évènement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="50" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-4" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="10" y="80" width="800" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-6" value="Flot nominal" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="230" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-13" value="&lt;b&gt;&lt;u&gt;Conditions :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le client est déjà enregistré en tant que client.&lt;br&gt;Les produits sont disponibles.&lt;br&gt;&lt;b&gt;&lt;u&gt;Résultats :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Une commande est crée, avec un numéro de commande, une date de livraison.&lt;br&gt;Une facture est crée avec les coordonnées du client et le détail de la commande.&lt;br&gt;Les coordonnées du client sont mis a jours.&lt;br&gt;Le stock produit est mis a jour." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="32.5" y="91" width="765" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-14" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="14" y="260" width="800" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-15" value="&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client se rend sur le site.&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches la page d&#39;accueil du site internet.&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client souhaite se connecter.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiche le hub de connexion.&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;--- Le client rentre ses identifiants de connexion.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches la page d&#39;accueil du site internet avec la mention connecté et la possibilité de voir son profil.&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;--- Le client parcours alors les différentes catégorie et sélectionne une catégorie.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches alors les sous catégories lié a la catégorie choisi.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client sélectionne alors une sous catégories.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches alors les produits lié a cette sous-catégorie.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client parcours le catalogue des produits et choisi le produit souhaité.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches alors le détail du produit.&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;--- Le client met cet article dans son panier et clique ensuite sur le panier.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système lui affiches alors le récapitulatif du panier.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client clique sur valider le panier et procéder au paiement.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système affiches alors la page de paiements.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client saisie désormais les informations de livraison puis ses coordonnées bancaires.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;- Le système vérifie la véracité des coordonnées saisi et valide alors la commande.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;--- Le client est redirigé sur une page qui indique sur la commande est effectué.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 1;&quot;&gt;---Le client reçoit alors par mail la confirmation de la commande et la facture.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="31.25" y="270" width="767.5" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-20" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="14" y="850" width="800" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-21" value="Flot alternatifs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="820" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-22" value="&lt;b style=&quot;text-decoration-line: underline;&quot;&gt;Le client n&#39;est pas enregistré :&lt;/b&gt;&lt;br&gt;Le client se rend sur le hub de connexion et cliques sur &quot; Pas encore client ? &quot;&lt;br&gt;Il saisi alors ses informations pour crée son compte.&lt;br&gt;Le système vérifie la véracité des informations puis crée le compte.&lt;br&gt;Le cas d’utilisation reprend normalement.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Les informations ne sont pas correct :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le système détecte alors des informations incorrect.&lt;br&gt;Le système renvoie sur le formulaire en question et signifie les informations incorrect.&lt;br&gt;Le client corrige alors les erreurs.&lt;br&gt;Ceci se répète jusqu’à ce que le système ne détecte plus d&#39;erreur.&lt;br&gt;Le cas d&#39;utilisation reprend normalement.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Le produit recherché n&#39;est plus en stock :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le délai de livraison est alors calculé et inscrit dans le détail du produit.&lt;br&gt;Le client peut alors mettre le produit dans le panier et le validera des que le produit sera mis en stock.&lt;br&gt;Le cas d&#39;utilisation reprend normalement.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Les informations bancaires ne sont pas correct:&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le système détecte alors des informations incorrect.&lt;br&gt;Le système renvoie sur le formulaire en question et signifie les informations incorrect.&lt;br&gt;Le client corrige alors les erreurs.&lt;br&gt;Ceci se répète jusqu’à ce que le système ne détecte plus d&#39;erreur.&lt;br&gt;Le cas d&#39;utilisation reprend normalement.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Le règlement n&#39;a pas abouti :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le cas d&#39;utilisation prend fin.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;Le client peut abandonné à tout moment :&lt;br&gt;&lt;/u&gt;&lt;/b&gt;Le cas d&#39;utilisation prend fin." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="740" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="szvbojdEr7eZIrvB9NSX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="szvbojdEr7eZIrvB9NSX-14" target="szvbojdEr7eZIrvB9NSX-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="-usAX2qW7vgS7nouqSHg" name="Page-2">
+    <mxGraphModel dx="1348" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KlCA_lqKdUQ5_XldVnVo-2" value="Client&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="24" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KlCA_lqKdUQ5_XldVnVo-3" value=":système" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="24" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KlCA_lqKdUQ5_XldVnVo-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="165" y="1140" as="sourcePoint" />
+            <mxPoint x="164.5" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KlCA_lqKdUQ5_XldVnVo-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="1140" as="sourcePoint" />
+            <mxPoint x="609" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="144" as="sourcePoint" />
+            <mxPoint x="600" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="194" as="sourcePoint" />
+            <mxPoint x="170" y="194" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-3" value="Le client se rend sur le site" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="104" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-4" value="Le système lui affiches la page d&#39;accueil du site internet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="154" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="244" as="sourcePoint" />
+            <mxPoint x="600" y="244" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-6" value="Le client souhaite se connecter" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="204" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="294" as="sourcePoint" />
+            <mxPoint x="170" y="294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-8" value="Le système lui affiche le Hub de connexion" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="254" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="344" as="sourcePoint" />
+            <mxPoint x="600" y="344" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-10" value="Le client rentre ses informations de connexion" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="304" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="394" as="sourcePoint" />
+            <mxPoint x="170" y="394" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-12" value="Le système lui affiches la page d&#39;accueil du site internet avec la mention connecté et la possibilité de voir son profil." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="354" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="454" as="sourcePoint" />
+            <mxPoint x="600" y="454" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-14" value="Le client parcours alors les différentes catégories et sélectionne celle qui l’intéresse." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="414" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="504" as="sourcePoint" />
+            <mxPoint x="170" y="504" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-16" value="Le système lui affiches alors les sous catégories lié a la catégorie choisi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="464" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="554" as="sourcePoint" />
+            <mxPoint x="600" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-18" value="Le client sélectionne alors une sous catégorie" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="518.5" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SA-nNtEsqDwqP_IdjS4q-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="604" as="sourcePoint" />
+            <mxPoint x="170" y="604" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-1" value="Le système lui affiches alors les produits lié a cette sous-catégorie" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="564" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="654" as="sourcePoint" />
+            <mxPoint x="600" y="654" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-3" value="Le client parcours le catalogue des produits et choisi le produit souhaité" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="614" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="704" as="sourcePoint" />
+            <mxPoint x="170" y="704" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-5" value="Le système lui affiches alors le détail du produit" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="664" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="764" as="sourcePoint" />
+            <mxPoint x="600" y="764" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-7" value="Le client met cet article dans son panier et clique ensuite sur le panier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="724" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="814" as="sourcePoint" />
+            <mxPoint x="170" y="814" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-9" value="Le système lui affiches alors le récapitulatif du panier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="774" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="864" as="sourcePoint" />
+            <mxPoint x="600" y="864" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-11" value="Le client clique sur valider le panier et procéder au paiement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="824" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="914" as="sourcePoint" />
+            <mxPoint x="170" y="914" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-13" value="Le système affiches alors la page de paiement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="874" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="964" as="sourcePoint" />
+            <mxPoint x="600" y="964" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-15" value="Le client saisie désormais les informations de livraison puis ses coordonnées bancaires" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="924" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="1014" as="sourcePoint" />
+            <mxPoint x="170" y="1014" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-17" value="Le système vérifie la véracité des coordonnées saisi et valide alors la commande" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="974" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="1074" as="sourcePoint" />
+            <mxPoint x="600" y="1074" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-19" value="Le client est redirige sur une page qui indique que la commande est effectué" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1034" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="1120" as="sourcePoint" />
+            <mxPoint x="600" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lVgu1eMa8U_dmS-N0Y-L-21" value="Le client reçoit alors par mail la confirmation de la commande et la facture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1080" width="430" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
