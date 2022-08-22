@@ -1,8 +1,6 @@
     var envoie = '';
     var email = document.getElementById('registration_form_email'); // On récupère la valeur du champs
     var password = document.getElementById('registration_form_plainPassword'); // On récupère la valeur du champs
-    var adresseDifference = document.getElementById('registration_form_adresseDifference').checked; // On récupère la valeur du checkbox 
-    var labelVilleFacture = document.getElementById('registration_form_adresseFacture');
 
     var e = /^([a-zA-Z0-9\-\.]+@[a-zA-Z0-9\-\.]+\.[a-z]{2,5})$/; // Regex pour un email
 
@@ -48,13 +46,36 @@
         alert(envoie);
     }
 
+/*************************************Checkbox Address Facturation*****************************************************************************/
 
-    // if (adresseDifference == false) {
-    //     console.log("Uncheck");
-    //     labelVilleFacture.disabled = true;
-    // }
+function myFunction1(){
 
-    // if (adresseDifference == true) {
-    //     console.log("Check");
-    //     labelVilleFacture.disabled = false;
-    // }
+    var Facturation = document.getElementById("registration_form_adresseDifference"); // On récupère l'id de la checkbox
+    // console.log(Facturation.checked);
+
+    var Facture = document.getElementById('Facture');// On récupère l'id de la div qui contient les champs facture
+
+    if ( Facturation.checked == true ){
+        // console.log('Check');
+        Facture.style.display = "block"; // On affiche le block
+    } else {
+        Facture.style.display = "none"; // Sinon on laisse le block en none
+    };
+};
+
+/**************************************Checkbox Professionnelle*******************************************************************************/
+
+function myFunction2(){
+
+    var Pro = document.getElementById("registration_form_categorie"); // On récupère l'id de la checkbox
+    // console.log(Pro.checked);
+
+    var Professionnelle = document.getElementById('Professionnelle'); // On récupère l'id de la div qui contient les champs de professionnelle
+
+    if ( Pro.checked == true ){
+        // console.log('Check');
+        Professionnelle.style.display = "block"; // On affiche le block
+    } else {
+        Professionnelle.style.display = "none"; // Sinon on laisse le block en none
+    };
+};

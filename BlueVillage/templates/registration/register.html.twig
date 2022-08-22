@@ -36,32 +36,38 @@
         {{ form_row(registrationForm.adresseDifference, {
             label: 'L adresse de facture est elle differente ?'
         }) }} 
-        
-        {{ form_row(registrationForm.adresseFacture, {
-            label: 'Adresse de facture'
-        }) }}  
 
-        {{ form_row(registrationForm.cpFacture, {
-            label: 'Code postal Facture'
-        }) }}
+        <div id="Facture" style="display: none;">    
 
-        {{ form_row(registrationForm.villeFacture, {
-            label: 'Ville de facture'
-        }) }}
+            {{ form_row(registrationForm.adresseFacture, {
+                label: 'Adresse de facture',
+            }) }}  
+
+            {{ form_row(registrationForm.cpFacture, {
+                label: 'Code postal Facture'
+            }) }}
+
+            {{ form_row(registrationForm.villeFacture, {
+                label: 'Ville de facture'
+            }) }}
+
+        </div>
 
         {{ form_row(registrationForm.categorie, {
             label: 'Êtes vous professionnel ?'
         }) }} 
 
-        {{ form_row(registrationForm.nomEntreprise, {
-            label: 'Nom de l entreprise'
-        }) }}
-        
-        {{ form_row(registrationForm.numeroSiret, {
-            label: 'Numero de Siret'
-        }) }}
+        <div id="Professionnelle" style="display: none;">
 
+            {{ form_row(registrationForm.nomEntreprise, {
+                label: 'Nom de l entreprise'
+            }) }}
+            
+            {{ form_row(registrationForm.numeroSiret, {
+                label: 'Numero de Siret'
+            }) }}
 
+        </div>
         
         <button type="submit" class="btn btn-primary">S'inscrire</button>
     {{ form_end(registrationForm) }} 

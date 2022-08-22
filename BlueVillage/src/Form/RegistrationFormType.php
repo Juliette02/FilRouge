@@ -161,11 +161,17 @@ class RegistrationFormType extends AbstractType
             ->add('categorie', CheckboxType::class, [
                 'mapped' => false,
                 'required' => false,
+                'attr' => [
+                    'onClick' => 'myFunction2()'
+                ]
             ])
 
             ->add('adresseDifference', CheckboxType::class, [
                 'mapped' => false,
                 'required' => false,
+                'attr' => [
+                    'onClick' => 'myFunction1()'
+                ]
             ])
 
             ->add('nomEntreprise' , TextType::class, [
