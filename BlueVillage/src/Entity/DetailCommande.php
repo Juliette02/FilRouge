@@ -119,5 +119,4 @@ class DetailCommande
 
         return $this;
     }
-
 }

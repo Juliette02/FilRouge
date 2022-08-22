@@ -299,6 +299,8 @@
 }
 
 .cardphare3{
+    width: 50%;
+    height: auto;
     display: inline-flex;
     text-align: center;
 }
