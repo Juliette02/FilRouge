@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
-*{
+*{  /* reset des parametres CSS */
     margin: 0;
     padding: 0;
     font-family: 'Lato' , 'sans-serif';
     max-width: 100%;
 }
 
-.bg{
+.bg{  /* background du site */
     background-color: #F3F3F3;
     width: 100%;
 }
 
-#bgproduit{
-    overflow-x: hidden;
+#bgproduit{ /* largeur du detail poroduit */
+    max-width: 90%;
 }
 /* ***************************************************************************************************************
 ********************************************     HEADER     ******************************************************
 *****************************************************************************************************************/
 
-.container1{
+.container1{ /* container du header */
     position: relative;
     display: inline-flex;
     justify-content: space-between;
@@ -32,24 +32,24 @@
     width: 40vw;
 }
 
-.container1 .navmilieu a{
+.container1 .navmilieu a{ /* Logo Blue Village du header */
     display: flex;
     justify-content: center;
     font-size: 48px;
     color: #17C4FB;
     font-weight: 700;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px black; /* contour de la police */
     text-decoration: none;
-    text-shadow: 0 5px 10px black;
+    text-shadow: 0 5px 10px black; /* ombre du texte */
 
 }
 
-.container1 .navmilieu a:hover{
-    transform: scale(1.10);
+.container1 .navmilieu a:hover{ /* passage souris/hover sur le logo */
+    transform: scale(1.10); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
-.container1 .navmilieu input{
+.container1 .navmilieu input{ /* barre de recherche du site */
     width: 100%;
     height: 3rem;
     display: flex;
@@ -60,11 +60,11 @@
     text-align: center;
 }
 
-#homehidden{
+#homehidden{ /* deuxieme home mis en transparent pour avoir un decalage similaire */
     visibility: hidden;
 }
 .container1 .navgauche ul,
-.container1 .navdroite ul{
+.container1 .navdroite ul{ /* Ul des deux cotés du header */
     list-style: none;
     display: inline-flex;
 }
@@ -88,8 +88,8 @@
     color: #1797BF;
 }
 
-.container1 i:hover{
-    transform: scale(1.10);
+.container1 i:hover{ /* passage souris/hover sur les icones */
+    transform: scale(1.10); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
@@ -98,23 +98,23 @@
 ********************************************     NAVBAR     ******************************************************
 *****************************************************************************************************************/
 
-#rubriques{
+#rubriques{ /* barre de navigation */
     border-top: 2px solid #1797BF;
     border-bottom: 2px solid #1797BF;
 }
 
 #rubriques ul{
     display: inline-flex;
-    list-style: none;
+    list-style: none; /* enlever les point de liste */
     font-size: 20px;
 }
 
-#rubriques li a{
+#rubriques li a{ /* lien cliquable des rubriques */
     display: flex;
     text-align: center;
     padding-left: 3vw;
     color: rgb(0, 0, 0);
-    text-decoration: none;
+    text-decoration: none; /* enleve l'effet bleu des liens */
 }
 
 #rubriques li button{
@@ -122,10 +122,10 @@
     text-align: center;
     padding-left: 3vw;
     color: rgb(0, 0, 0);
-    text-decoration: none;
+    text-decoration: none; /* enleve l'effet bleu des liens */
 }
 
-#rubriques li:hover a{
+#rubriques li:hover a{ /* passage souris/hover sur les liens */
     color: white;
     transition: 0.5s ease-in-out;
 }
@@ -143,48 +143,48 @@
     height: auto;
 }
 
-.maintitle{
+.maintitle{ /* container "Nos Catégories" */
     padding-top: 2vh;
     display: flex;
     justify-content: center;
     color: #17C4FB;
 }
 
-.maintitle h2{
+.maintitle h2{ /* titre "Nos Catégories" */
     font-size: 48px;
     font-weight: 700;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0 5px 30px #8a8a8a;
+    -webkit-text-stroke: 1px black; /* contours noir du texte */
+    text-shadow: 0 5px 30px #8a8a8a; /* ombre du texte */
 }
 
-.cardcomplete{
+.cardcomplete{ /* card complete des categories */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; /* flex-wrap pour le responsive */
     margin: 2%;
 }
 
-.cardrubrique{
+.cardrubrique{ /* card des rubriques */
     position: relative;
     width: 320px;
     height: 300px;
     box-shadow: inset 5px 5px 5px rgb(0, 0, 0),
                 inset -5px -5px -5px rgb(128, 128, 128),
                 5px 5px 5px rgb(0, 0, 0),
-                -5px -5px -5px rgb(128, 128, 128);
-    border-radius: 50%;
+                -5px -5px -5px rgb(128, 128, 128); /* ombres de la card */
+    border-radius: 50%; /* effet arrondi sur la card */
     margin: 30px;
 }
 
-.cardcontent{
+.cardcontent{  /* contenu de la card rubrique */
     position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
     bottom: 20px;
     background: white;
-    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1);
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1); /* ombres */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -192,7 +192,7 @@
     align-items: center;
 }
 
-.cardcontent img{
+.cardcontent img{ /* image de la card rubrique */
     width: 140px;
     height: auto;
     text-align: center;
@@ -200,20 +200,20 @@
     text-decoration: none;
 }
 
-.cardcontent h2{
+.cardcontent h2{ /* contenu texte des card rubriques */
     margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #17C4FB;
-    text-decoration: none;
+    text-decoration: none; /* enleve l'effet bleu des liens */
     font-size: 20px;
 }
 
-.cardrubrique:hover{
-    transform: scale(1.10);
+.cardrubrique:hover{ /* passage souris/hover sur la card */
+    transform: scale(1.10); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
-    overflow: hidden;
+    overflow: hidden; /* empeche le depassement de la card */
 }
 
 
@@ -221,53 +221,52 @@
 ******************************************     PRODUITS PHARES     ***********************************************
 *****************************************************************************************************************/
 
-.mainproduitphare{
+.mainproduitphare{ /* container "Produits phares" */
     margin-top: 5%;
 }
 
-.cardcompletephare{
+.cardcompletephare{ /* card complete des produits pahres */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;   /* flex-wrap pour le responsive */
     margin: 2%;
     margin-bottom: 0;
-
 }
 
-.cardphare1{
+.cardphare1{ /* card phares avec lien */
     position: relative;
     width: 320px;
     height: 420px;
     box-shadow: inset 5px 5px 5px rgb(0, 0, 0),
                 inset -5px -5px -5px rgb(128, 128, 128),
                 5px 5px 5px rgb(0, 0, 0),
-                -5px -5px -5px rgb(128, 128, 128);
+                -5px -5px -5px rgb(128, 128, 128); /* ombres */
     border-radius: 5%;
     margin: 30px;
 }
 
-.cardphare1 a{
-    text-decoration: none;
+.cardphare1 a{ /* liens */
+    text-decoration: none; /* enleve l'effet bleu/soulignement sur les liens */
 }
 
-.cardphare2{
+.cardphare2{ /* card phares avec img */
     position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
     bottom: 20px;
-    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1);
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.1); /* ombres */
     border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, rgba(255,255,255,1) 25%, #ffffff 100%);
+    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, rgba(255,255,255,1) 25%, #ffffff 100%); /* effet fondu sur le bas de la carte */
     text-decoration: none;
 }
 
-.cardphare2 img{
+.cardphare2 img{ /* img de la card phares */
     width: 140px;
     height: auto;
     text-align: center;
@@ -275,13 +274,13 @@
     text-decoration: none;
 }
 
-.cardphare1:hover img{
-    transform: scale(1.30);
+.cardphare1:hover img{ /* passage souris/hover sur l'img */
+    transform: scale(1.30); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
 
-.cardphare2 h2{
+.cardphare2 h2{ /* lien du produit */
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -290,7 +289,7 @@
     font-size: 20px;
 }
 
-.cardphare2 h3{
+.cardphare2 h3{ /* libelle du produit */
     padding-top: 10%;
     font-size: 22px;
     display: flex;
@@ -298,14 +297,14 @@
     justify-content: center;
 }
 
-.cardphare3{
+.cardphare3{ /* lien du produit */
     width: 50%;
     height: auto;
     display: inline-flex;
     text-align: center;
 }
 
-.cardphare3 h3{
+.cardphare3 h3{ /* prix du produit */
     position: relative;
     display: inline-block;
     padding: 20px 20px;
@@ -315,8 +314,8 @@
     font-size: 24px;
 }
 
-.cardphare3 a:hover{
-    text-decoration: none;
+.cardphare3 a:hover{ /* passage souris/hover sur la card */
+    text-decoration: none; 
 }
 
 
@@ -325,20 +324,18 @@
 *****************************************************************************************************************/
 
 
-.footer{
+.footer{ /* footer */
     margin-top: auto;
     padding: 15px;
-    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     align-items: center; 
     height: 30vh;
     width: 100%; 
-    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, #F3F3F3 90%, #F3F3F3 100%);
-    /* bottom: 0; */
+    background: linear-gradient(0deg, rgba(23,196,251,1) 0%, #F3F3F3 90%, #F3F3F3 100%); /* effet fondu sur le footer */
 }
 
-.footer ul{
+.footer ul{ /* enleve les listes a puces des UL */
     list-style: none;
 }
 
@@ -346,13 +343,13 @@
     font-size: 24px;
 }
 
-.footergauche a{
+.footergauche a{ /* liens de la partie gauche du footer */
     color:black;
-    text-decoration: none;
+    text-decoration: none; /* enleve les effets du lien */
 }
 
-.footergauche a:hover i{
-    transform: scale(1.25);
+.footergauche a:hover i{ /* passage souris/hover sur les liens */
+    transform: scale(1.25); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
@@ -380,7 +377,6 @@
     padding: 10%;
 }
 
-
 .footerdroite{
     width: 25vw;
 }
@@ -394,8 +390,8 @@
     color: black;
 }
 
-.footerdroite a:hover i{
-    transform: scale(1.20);
+.footerdroite a:hover i{ /* passage souris/hover sur les liens */
+    transform: scale(1.20); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
@@ -413,39 +409,32 @@
     right: 0;
 } 
 
-
-.table1{
-    background-color: red;
-}
-
-
 /* ***************************************************************************************************************
 ********************************************     PANIER     ******************************************************
 *****************************************************************************************************************/
 
-#bgpanier{
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%, rgb(243,243,243,1) 100%);
+#bgpanier{ /* background du panier */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 60%, rgb(243,243,243,1) 100%); /* effet fondu */
 }
 
-#titrepanier{
+#titrepanier{ /* texte "Votre Panier" */
     font-size: 48px;
     color: #17C4FB;
     font-weight: 700;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px black; /* contours noir du texte */
     margin-left: 2%;
     margin-top: 2%;
-
 }
 
-.cardpanier{
+.cardpanier{ /* card du panier rempli */
     width: 100%;
     height: 10rem;
     background-color: rgb(230, 230, 230);
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgb(206, 206, 206);
+    box-shadow: 0 10px 10px rgb(206, 206, 206); /* ombres */
 }
 
-.cardpanier p{
+.cardpanier p{ /* montant total */
     display: flex;
     text-align: center;
     justify-content: center;
@@ -454,7 +443,7 @@
     font-weight: 700;
 }
 
-.cardpanier button{
+.cardpanier button{ /* bouton payer */
     width: 25%;
     height: auto;
     border-radius: 50px;
@@ -467,17 +456,21 @@
     text-align: center;
 }
 
- .paniervide, #bodylogin{
-    min-height: 20vh;
+ .paniervide{ /* container du panier vide */
+    min-height: 20vh; /* taille minimum du container */
 } 
 
-.paniervide{
+#bodylogin{
+    min-height: 40vh;
+}
+
+.paniervide{ /* container du panier vide */
     display: flex;
     justify-content: center;
     margin-top: 2%;
 }
 
-.cardpaniervide{
+.cardpaniervide{ /* card du panie vide */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,7 +481,7 @@
     border-radius: 20px;
 }
 
-.panierfooter{
+.panierfooter{ /* container "ajout article" + "imprimer facture" */
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -501,7 +494,7 @@
     padding-right: 5%;
 }
 
-.panierfooter1 a{
+.panierfooter1 a{ /* liens du container */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -510,8 +503,8 @@
     font-size:24px;
 }
 
-.panierfooter1 a:hover{
-    transform: scale(1.10);
+.panierfooter1 a:hover{ /* passage souris/hover sur les liens */
+    transform: scale(1.10); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
@@ -519,21 +512,21 @@
     width: 100%;
 }
 
-.panierfooterbot{
+.panierfooterbot{ /* container avec les informations sur l'achat */
     display: flex;
     margin-top: 2%;
     margin-left: 10%;
 }
 
-.panierfooter2{
+.panierfooter2{ /* contenu du container */
     width: 90%;
 }
 
-.panierfooter2 i{
+.panierfooter2 i{ /* logo "+" du container */
     padding-right: 5%;
 }
 
-.panierfooter2 a{
+.panierfooter2 a{ /* liens */
     display: flex;
     align-items: center;
     color: black;
@@ -541,28 +534,30 @@
     font-size:24px;
 }
 
-.panierfooter2 li:hover i{
-    transform: scale(1.10);
+.panierfooter2 li:hover i{ /* passage souris/hover sur les listes */
+    transform: scale(1.10); /* augmentation de la taille */
     transition: 0.5s ease-in-out;
 }
 
 .panierfooter2 hr{
     width: 100%;
 }
+
 .panierfooter2 ul{
     list-style-type: none;
 }
-.panierfooter2 h3{
+
+.panierfooter2 h3{ /* Texte "Informations sur l'achat" */
     color:#17C4FB;
     font-size: 38px;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px black; /* contours noir du texte */
 }
 
 .panierfooter2 p{
     font-size: 22px;
 }
 
-.panierfooter2 ul li ul {
+.panierfooter2 ul li ul { /* liste sous l'informations sur l'achat */
     display:none;
     margin-left:0;
     margin-bottom:9px;
@@ -574,7 +569,7 @@
     margin-bottom:9px;
 }
 
-.panierfooter2 ul li:focus ul {
+.panierfooter2 ul li:focus ul { /* clic sur la partie  */
     display:block;
 }
 
@@ -587,7 +582,7 @@ li[tabindex]:before {
      float:right;
      padding-right:0.5em;
      font-weight:bold;
-     color:white;
+     color: #F3F3F3;
      font-size:120%;
      line-height:26px;
 }
@@ -608,19 +603,231 @@ li:focus ul li a {
 
 
 /* ***************************************************************************************************************
+****************************************     INTERFACE USERS       ***********************************************
+*****************************************************************************************************************/
+
+.espaceclient, .espaceclient2{  /* container interface client */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.espaceclient2 input{ /* input du questionnaire */
+    width: 100%;
+}
+
+#formespaceclient{
+    background-color: #F3F3F3;
+    border: none;
+}
+
+
+/* ***************************************************************************************************************
+******************************************     CARTE PRODUIT       ***********************************************
+*****************************************************************************************************************/
+
+
+.card__image_produit img { /* image des card produit */
+    height: auto;
+    width: 40%;
+    vertical-align: middle;
+  }
+  
+  .cards_produit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards__item_produit {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .card_produit {
+    background-color: white;
+    border-radius: 0.50rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__content_produit {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;    
+    padding: 1rem;
+  }
+
+  .card__content_produit a{
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    width: 100%;
+    height: auto;
+}
+
+  .card__content_produit a:hover {
+      color: #17C4FB;
+      transition: 0.2s ease-in-out;
+  }
+
+  .card__content_produit i{
+      font-size: 36px;
+      color: #1797BF;
+      margin-left: 90%;
+  }
+
+  .card__title_produit {
+    color: gray;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  
+  .card__text_produit {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+
+/* ***************************************************************************************************************
 *****************************************     MEDIA QUERIES       ************************************************
 *****************************************************************************************************************/
 
 
+@media all and (max-width: 300px){  /* media queries en dessous de 300px */ 
 
-@media all and (max-width: 480px){
+    .cardphare3 h3{
+        margin-top: 300%;
+        margin-left: 50%;
+    }
 
-    .navmilieu a{
+    .cardcontent img{
+        width: 50%;
+    }
+
+    .cardcontent h2{
+        font-size: 18px;
         text-align: center;
     }
 
+    #carouselExampleCaptions{
+        visibility: hidden;
+        display: none !important;
+        width: 0%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .panierinterieur, .panierheader, .panierfdp{
+        font-size: 7px !important;
+    }
+
+    #imgproduitpanier{
+        width: 100% !important;
+    }
+
+    #bgpanier{
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 80%, rgb(243,243,243,1) 100%);
+    }
+
+    #nomproduit{
+        font-size: 14px !important;
+    }
+
+    #btnajouter{
+        font-size: 14px;
+    }
+
+    .card__content_produit i{
+        font-size: 26px;
+    }
+}
+
+@media all and (min-width: 300px) and (max-width: 350px){  /* media queries entre 300px et 350px */
+
+        .cardphare3 h3{
+            margin-top: 260%;
+            margin-left: 50%;
+        }
+
+        #carouselExampleCaptions{
+            visibility: hidden;
+            display: none !important;
+            width: 0%;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #bgpanier{
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 80%, rgb(243,243,243,1) 100%);
+        }
+
+        #btnajouter{
+            font-size: 14px;
+        }
+
+        .card__content_produit i{
+            font-size: 26px;
+        }
+
+        .panierfooter1 a, .panierfooter2 a{
+            font-size: 20px;
+        }
+
+        .panierinterieur, .panierheader, .panierfdp{
+            font-size: 8px !important;
+        }
+    }
+
+@media all and (min-width: 350px) and (max-width: 400px){   /* media queries entre 350px et 400px */
+
+    .cardphare3 h3{
+        margin-top: 220%;
+        margin-left: 50%;
+    }
+
+    #carouselExampleCaptions{
+        visibility: hidden;
+        display: none !important;
+        width: 0%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #imgproduitpanier{
+        width: 100% !important;
+    }
+
+    #bgpanier{
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 80%, rgb(243,243,243,1) 100%);
+    }   
+
+    .panierfooter1 a, .panierfooter2 a{
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 480px){ /* media queries en dessous de 480px */
+
     .container1{
-        height: 30vh;
+        min-height: 40vh;
+    }
+
+    .container1 .navmilieu a{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .container1 i{
+        font-size: 20px;
     }
 
     .maintitle{
@@ -639,12 +846,16 @@ li:focus ul li a {
         width: 100%;
     }
 
+    .footermilieu li, .footerdroite li{
+        font-size: 40px;
+    }
+
     .footerdroite{
         text-align: center;
     }
 
     .cardpanier .btnpayer{
-        width: 100%;
+        width: 50%;
     }
 
     #bodypanier{
@@ -661,9 +872,46 @@ li:focus ul li a {
         font-size: 15px;
     }
 
+    #imgproduit, #sidebarproduit{
+        width: 100%;
+        position: relative;
+    }
+    #bgproduit, #cheminproduit{
+        margin-left: 5%;
+    }
+
+    .footergauche li{
+        font-size: 18px;
+    }
+
+    #cardpaniercenter{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #imgproduitpanier{
+        width: 100% !important;
+    }
+
+    .panierinterieur, .panierheader, .panierfdp{
+        font-size: 12px;
+    }
+
+    #imgproduitcarte{
+        width: 75%;
+    }
+
+    #nomproduit{
+        font-size: 18px !important;
+    }
+
+    #prixproduit{
+        font-size: 24px !important;
+    }
 }
 
-@media all and (min-width: 480px) and (max-width: 720px){
+@media all and (min-width: 480px) and (max-width: 720px){   /* media queries entre 480px et 720px */
 
     .navmilieu a{
         text-align: center;
@@ -685,11 +933,15 @@ li:focus ul li a {
         width: 100%;
     }
 
+    .footergauche li{
+        font-size: 18px;
+        color: red;
+    }
+
     .footerdroite{
         text-align: center;
     }
 
-    
     .cardpanier .btnpayer{
         width: 50%;
     }
@@ -698,10 +950,39 @@ li:focus ul li a {
     #carouselExampleCaptions h5 {
         font-size: 18px;
     }
+
+    #imgproduit, #sidebarproduit{
+        width: 100%;
+        position: relative;
+    }
+    #bgproduit, #cheminproduit{
+        margin-left: 5%;
+    }
+
+    #cardpaniercenter{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    #imgproduitpanier{
+        width: 50% !important;
+    }
+
+    #imgproduitcarte{
+        width: 50%;
+    }
+
+    #nomproduit{
+        font-size: 18px !important;
+    }
+
+    #prixproduit{
+        font-size: 28px !important;
+    }
 }
 
-
-@media all and (min-width: 720px) and (max-width: 1360px){
+@media all and (min-width: 720px) and (max-width: 1360px){   /* media queries entre 720px et 1360px */
 
     .navmilieu a{
         text-align: center;
@@ -736,5 +1017,28 @@ li:focus ul li a {
     #carouselExampleCaptions h5 {
         font-size: 30px;
     }
-}  
 
+    #imgproduitpanier{
+        width: 50% !important;
+    }
+
+    #imgproduitcarte{
+        width: auto;
+        height: 100%;
+    }
+
+    #nomproduit{
+        font-size: 18px !important;
+    }
+
+    #prixproduit{
+        font-size: 28px !important;
+    }
+}
+
+@media all and (min-width: 1360px) and (max-width: 2000px){   /* media queries entre 1360px et 2000px */
+
+    #imgproduitpanier{
+        width: 50% !important;
+    }
+}

@@ -7,8 +7,8 @@
     <h1 id="titrepanier">Votre panier</h1>
 
 <div class="container-fluid g-0" id="bodypanier">
-<div class="row">
-<div class="col-9 col-sm-9 col-md-9">
+<div class="row d-flex justify-content-center">
+<div class="col-xs-12 col-sm-12 col-md-9">
 
 
 
@@ -16,11 +16,11 @@
     {% if items | length > 0 %}
         <table class="table">
             <thead>
-                <tr>
+                <tr class="panierheader">
                     <th class="col-4">Produit</th>
                     <th></th>
                     <th>Prix</th>
-                    <th>Quantité</th>
+                    <th>Qté</th>
                     <th>Total</th>
                     <th></th>
                 </tr>
@@ -28,8 +28,8 @@
             <tbody>
             {# Pour chaque produit dans le panier on affiche son nom, son prix, sa quantité, et son total #}
                 {% for item in items %}
-                    <tr>
-                        <td id="bgpanier"><img src="/upload/img/produit/{{ item.produit.photo }}" class="w-25"></td>
+                    <tr class="panierinterieur">
+                        <td id="bgpanier"><img src="/upload/img/produit/{{ item.produit.photo }}" id="imgproduitpanier"></td>
                         <td>{{ item.produit.LibelleCourt }}</td>
                         <td>{{ item.produit.prixHorsTaxe }} €</td>
                         <td>{{ item.quantity }}</td>
@@ -43,8 +43,8 @@
                     </tr>
                 {% endfor %}
                     {% if items | length > 0 %}
-                        <tr>
-                            <td id="bgpanier"><img src="/upload/img/frais-de-livraison-.jpg" class="w-25"></td>
+                        <tr class="panierfdp">
+                            <td id="bgpanier"><img src="/upload/img/frais-de-livraison-.jpg" class="w-25" id="imgproduitpanier"></td>
                             <td>Frais de port</td>
                             <td>10.00 €</td>
                             <td>1</td>
@@ -62,7 +62,7 @@
             </tfoot>
         </table>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-sm-3 col-md-3" id="cardpaniercenter">
             <div class="cardpanier">
                 <p> Montant total : {{ total }} €</p>
                     <div class="divpayer">

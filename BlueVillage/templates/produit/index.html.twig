@@ -24,28 +24,22 @@
         </nav>
 
         {% for produit in produits %}
-        <div class="offset-2">
-           <div class="card mt-3 mb-3 mx-5 col-9 rounded-pill border border-dark shadow p-3 mb-5 bg-body rounded">
-                <div class="row g-0 d-flex">
-                    <div class="col-md-4">
-                        <img src="/upload/img/produit/{{ produit.photo }}" class="img-fluid rounded-pill" alt="{{ produit.libelleCourt }}">
-                    </div>
-                    <div class="col-md-8 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title fs-3 fw-bold">{{ produit.libelleCourt }}</h5>
-                            <p class="card-text fs-1 fw-bold"><small class"text-muted">{{ produit.prixHorsTaxe }}€</small></p>
+        <ul class="cards_produit">
+                <a href="{{ path('app_produit_show', {'id': produit.id}) }}">
+                    <li class="cards__item_produit">
+                        <div class="card_produit">
+                        <div class="card__image_produit"> 
+                            <img src="/upload/img/produit/{{ produit.photo }}"                
+                            </div>
+                        <div class="card__content_produit">
+                                <h5 class="card-title fs-3 fw-bold" id="nomproduit">{{ produit.libelleCourt }}</h5>
+                                    <p class="card-text fs-1 fw-bold" id="prixproduit"><small class"text-muted">{{ produit.prixHorsTaxe }}€</small></p>
+                                <a href="{{ path('cart_add', {'id': produit.id }) }}"><i class="fa-solid fa-cart-plus"></i></a> 
                         </div>
-                         
-                                            
-                        <a class="btn btn-primary mt-5" href="{{ path('app_produit_show', {'id': produit.id}) }}">Détail</a>
-                        <a href="{{ path('cart_add', {'id': produit.id }) }}" class="btn btn-info text-white mt-5"> Ajouter </a> 
-                        {# {'idi': produit.id} Récupère le chemin pour afficher le produit par son id #}
-                        {# <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">Modifier</a> #}
-                        {# {'idi': produit.id} Récupère le chemin pour afficher le produit par son id #}
-                    </div>
-                </div>
-           </div>
-        </div>       
+                        </div>     
+                    </li>
+                </a>
+            </ul>
             
         {% else %}
            

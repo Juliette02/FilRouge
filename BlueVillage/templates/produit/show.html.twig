@@ -5,12 +5,12 @@
 {% block produit %}
 
 <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
+  <div class="container-fluid" id="cheminproduit">
     <a class="navbar-brand" href="{{ path('sousRubrique', {'id':produit.rubrique.rubrique.id }) }}">{{ produit.rubrique.rubrique.nom }} <i class="fa-solid fa-angle-right mx-2"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNave" aria-controls="navbarNave" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNave">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{ path('app_produit_index', {'id':produit.rubrique.id}) }}">{{ produit.rubrique.nom }} <i class="fa-solid fa-angle-right mx-2"></i></a>
@@ -26,9 +26,10 @@
 
         <div class="row p-1 g-0 " id="bgproduit">
             <h1 class="fw-bold mx-3">{{produit.libelleCourt}}</h1>
-            <img src="/upload/img/produit/{{produit.photo}}" alt="{{produit.libelleCourt}}" title="{{produit.libelleCourt}}" class="img-fluid col-6 shadow">
+            <img src="/upload/img/produit/{{produit.photo}}" alt="{{produit.libelleCourt}}" title="{{produit.libelleCourt}}" class="img-fluid col-6 shadow" 
+            id="imgproduit">
 
-            <div class="col-6 p-1 text-center sticky-top">
+            <div class="col-6 p-1 text-center sticky-top" id="sidebarproduit">
                 
                 <div class="fs-1 fw-bold"> {{ produit.prixHorsTaxe }} €</div>
                 <p class="fs-4">Tous les prix TVA incl.(TTC)<p>
@@ -48,7 +49,7 @@
                 
             </div>
 
-            <p class="fs-4 col-6 text-center">{{ produit.libelleLong }}</p>
+            <p class="fs-4 col-md-6 col-xs-12 text-center">{{ produit.libelleLong }} </p>
         </div>
     
     {% if is_granted('ROLE_ADMIN') %}

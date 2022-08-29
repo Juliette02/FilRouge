@@ -3,7 +3,10 @@
 {% block title %}User index{% endblock %}
 
 {% block login %}
-    <h1>User index</h1>
+
+    <div class="container" id="bodylogin">
+
+    <h1>Interfaces des utilisateurs</h1>
 
     <table class="table">
         <thead>
@@ -11,8 +14,7 @@
                 <th>Id</th>
                 <th>Email</th>
                 <th>Roles</th>
-                <th>Password</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +23,6 @@
                 <td>{{ user.id }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
                 <td>
                     <a href="{{ path('app_user_show', {'id': user.id}) }}" class="btn btn-outline-info pr-2">show</a>
                     <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="btn btn-outline-info pr-2">edit</a>
@@ -29,11 +30,13 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucun utilisateur trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
     <a href="{{ path('app_user_new') }}" class="btn btn-outline-success">Create new</a>
+
+    </div>
 {% endblock %}

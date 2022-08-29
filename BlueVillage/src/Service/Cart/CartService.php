@@ -75,11 +75,19 @@ class CartService
     {
         //Par défaut le total = 0
         $total = 0;
+        $fdp = 0;
 
         foreach ($this->getFullCart() as $item) {//Pour chaque produit dans le panier
 
             $total += $item['produit']->getPrixHorsTaxe() * $item['quantity'];//On dit que le total = Prix du produit * la quantité de ce produtit
         }
+
+        if($total <= 500){
+            $fdp = 10;
+        }else{
+            $fdp = 0;
+        }
+        $total += $fdp;
 
         return $total;//On return le total
     }

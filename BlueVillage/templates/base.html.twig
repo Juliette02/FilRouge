@@ -49,32 +49,41 @@
 
 
 <form method="post" action="/login"> 
-      {# <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div> #}
 
       {% if error is defined and error.messageKey is defined %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    {% if app.user %}
+    {% if app.user and is_granted('ROLE_ADMIN') == false %}
 
 
 
         <div class="mb-3 d-flex flex-column text-center">
             Bonjour {{ app.user.userIdentifier }} <br>
 
-
-            <a href="{{ path('app_user_index') }}" class="btn btn-outline-info mt-5 text-dark w-50 align-self-center">Mon profil</a>
+            <a href="{{ path('app_client') }}" class="btn btn-outline-info mt-5 text-dark w-50 align-self-center">Mon profil</a>
 
             <a href="#" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Mes commandes</a>
-
 
             <a href="{{ path('app_logout') }}" class="btn btn-outline-danger text-dark mt-5 w-50 align-self-center">Déconnexion</a>
         </div>
 
+    {% elseif is_granted('ROLE_ADMIN') %}
 
-{% else %}
+        <div class="mb-3 d-flex flex-column text-center">
+            Bonjour {{ app.user.userIdentifier }} <br>
 
+            <a href="{{ path('app_user_index') }}" class="btn btn-outline-info mt-5 text-dark w-50 align-self-center">Profil Clients</a>
 
+            <a href="#" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Commandes Clients</a>
+
+            <a href="{{ path('app_logout') }}" class="btn btn-outline-danger text-dark mt-5 w-50 align-self-center">Déconnexion</a>
+        </div>
+
+    {% endif %}
+
+    
+{% if is_granted('ROLE_USER') == false %}
 
 
     <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
@@ -86,17 +95,6 @@
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
 
     <button class="btn btn-lg btn-primary mt-3" type="submit">
         Connexion
@@ -111,13 +109,7 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
 
         </div>
     </div>
-
-
 </form>
-
-
-
-
 
         {% block body %}
             <nav class="navbar navbar-expand-lg navbar-light bg-info col-12" id="rubriques">
@@ -138,8 +130,6 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
             </nav>
         {% endblock %}
 
-
-
             {% block rubrique %}
             {% endblock %}
 
@@ -156,30 +146,15 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
             {% block admin %}
             {% endblock %}
 
-{#             <nav class="navbar navbar-light bg-light">
-                        <a class="navbar-brand">Navbar</a>
-                            {% if app.user %}
-                                        <a class="btn btn-outline-info" href="{{ path('membre') }}">Page membre</a>
-                                {% if is_granted('ROLE_ADMIN') %}
-                                        <a class="btn btn-outline-warning" href="{{ path('admin') }}">Page admin</a>
-                                {% endif %}                                <div>
-                                        Bonjour {{ app.user.username }} <a class="btn btn-sm btn-danger" href="{{ path('app_logout') }}">Déconnexion</a>
-                                </div>
-                        {% else %}
-                                <div>
-                                        <a class="btn btn-sm btn-primary" href="{{ path('app_register') }}">S'inscrire</a>
-                                        <a class="btn btn-sm btn-success" href="{{ path('app_login') }}">Se connecter</a>
-                                </div>
-                        {% endif %}
-                </nav> #}
-                <div class="container" id="bodylogin">
+            {% block clients %}
+            {% endblock %}
+
                         {% if message is defined %}
                                 <div class="alert alert-danger">
                                         {{ message }}
                                 </div>
                         {% endif %}
 
-                        
                         {% block login %}
                         {% endblock %}
 
@@ -189,25 +164,16 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
                         {% block edituser %}
                         {% endblock %}
 
-                </div>
-
-
-
-        {# <div class="container-fluid">
-            <div class="row"> #}
                 <div class="footer">
-                    {# <div class="col-md-4 col-sm-12"> #}
                         <div class="footergauche">
                             <ul>
                                 <li><a href="#"><i class="fa-solid fa-circle-info"></i> Information légales </a></li>            
                                 <li><a href="#"><i class="fa-solid fa-circle-info"></i> Politiques de confidentialité</a></li>
                                 <li><a href="#"><i class="fa-solid fa-location-pin"></i> 73 Boulevard Bertin, 44432 Tessier</a></li>
-                                <li><a href="#"><i class="fa-solid fa-envelope"></i> VillageGreen@exemple.com</a></li>
+                                <li><a href="#"><i class="fa-solid fa-envelope"></i> BlueVillage@ex.com</a></li>
                             </ul>
                         </div>
-                    {# </div> #}
 
-                {# <div class="col-md-4 col-sm-12"> #}
                     <div class="footermilieu">
                         <ul>
                             <li><i class="fa-brands fa-paypal"></i></li>            
@@ -222,10 +188,8 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
                             <li><i class="fa-brands fa-cc-amex"></i></li>
                         </ul>
                     </div>        
-                {# </div>     #}
 
 
-                {# <div class="col-md-4 col-sm-12"> #}
                     <div class="footerdroite">
                         <ul>
                             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>            
@@ -235,9 +199,6 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
                         </ul>
                     </div>  
                 </div>    
-            {# </div>
-        </div>
-    </div> #}
 
     </body>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
