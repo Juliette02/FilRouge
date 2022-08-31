@@ -27,6 +27,22 @@ class CartController extends AbstractController
     }
 
 
+    #[Route('/paiement', name: 'app_paiement')]
+    public function index2(CartService $cartService, RubriqueRepository $repo): Response
+    {//On demande a Symfony de nous passer le CartService(Service/Cart/CartService.php)
+        
+        $rubriques = $repo->findBy(array('rubrique' => null));
+
+
+        return $this->render('paiement/paiement.html.twig', [
+            'controller_name' => 'CartController',
+            'items'           => $cartService->getFullCart(),//Fonction du CartService qui permet d'afficher la totalité du panier
+            'total'           => $cartService->getTotal(),//Fonction du CartService qui permet d'obtenir le prix total du panier
+            'rubrique'        => $rubriques
+        ]);
+    }
+
+
     //Permet d'ajouter des produits dans le panier
     #[Route('/cart/add/{id}', name:'cart_add')]
     public function add($id, CartService $cartService) {

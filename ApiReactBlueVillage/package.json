@@ -1,0 +1,34 @@
+{
+  "name": "ApiReactFilRouge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "api-platform-admin": "^0.1.11",
+    "parcel": "^2.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "semantic-ui-react": "^2.1.3"
+  },
+  "source": "src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "../public/js/react/"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "start": "parcel",
+    "build": "parcel build --no-source-maps",
+    "watch": "parcel watch --no-source-maps"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

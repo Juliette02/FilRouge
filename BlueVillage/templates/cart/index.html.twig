@@ -66,7 +66,18 @@
             <div class="cardpanier">
                 <p> Montant total : {{ total }} €</p>
                     <div class="divpayer">
-                        <button class="btnpayer">Payer</button>
+
+                        {% if app.user and is_granted('ROLE_ADMIN') == false %}
+
+                        <button class="btnpayer"><a href="{{ path('app_paiement') }}">Payer</button>
+
+                        {% elseif app.user == false %}
+
+                        <button class="btnpayer" id="btnpayernonvalide">Payer</button> <br>
+
+                        <span class="msgconnexion">Veuillez vous connecté</span>
+
+                        {% endif %}
                     </div>            
                     </div>
         </div>

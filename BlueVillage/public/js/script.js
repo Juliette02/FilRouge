@@ -5,4 +5,12 @@ $("#new_edit_utilisateur").on('submit', function(){
         alert("Merci de renouveler l'opération");
         return false;
     }
-})
+});
+        
+
+    document.getElementById('btnpayernonvalide').onclick = function() {
+    {
+        console.log('Check');
+        document.querySelector('.msgconnexion').style.opacity = "1";
+    } 
+    };

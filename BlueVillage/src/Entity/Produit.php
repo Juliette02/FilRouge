@@ -2,43 +2,75 @@
 
 namespace App\Entity;
 
-use App\Repository\ProduitRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ProduitRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['read:produit']]
+)]
 class Produit
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    /**
+     * * @Groups("read:produit")
+     */
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $libelleCourt;
 
     #[ORM\Column(type: 'string', length: 1500)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $libelleLong;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $referenceFournisseur;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $photo;
 
     #[ORM\Column(type: "decimal", precision: 19, scale: 2)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $prixAchat;
 
     #[ORM\Column(type: "decimal", precision: 19, scale: 2)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $prixHorsTaxe;
 
     #[ORM\ManyToOne(targetEntity: Rubrique::class, inversedBy: "produits")]
     #[ORM\JoinColumn(nullable: false, onDelete: 'CASCADE')]
+    /**
+     * * @Groups("read:produit")
+     */
     private $rubrique;
 
     #[ORM\ManyToOne(targetEntity: Fournisseur::class, inversedBy: "produits")]
     #[ORM\JoinColumn(nullable: false)]
+    /**
+     * * @Groups("read:produit")
+     */
     private $fournisseur;
 
     #[ORM\OneToMany(targetEntity: DetailCommande::class, mappedBy: "idProduit")]

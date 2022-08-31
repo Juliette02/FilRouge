@@ -464,6 +464,17 @@
     min-height: 40vh;
 }
 
+.btnpayer a{
+    text-decoration: none;
+    color: white;
+}
+
+.msgconnexion{
+    color: rgb(200, 0, 0);
+    font-size: 24px;
+    opacity: 0;
+}
+
 .paniervide{ /* container du panier vide */
     display: flex;
     justify-content: center;
@@ -698,6 +709,180 @@ li:focus ul li a {
 
 
 /* ***************************************************************************************************************
+**************************************     CARTE CREDIT PAIEMENT       *******************************************
+*****************************************************************************************************************/
+
+.containerpaiement{
+    background: #F3F3F3;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.containerpaiement{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.containerpaiement form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.containerpaiement form .inputBox{
+    margin-top: 20px;
+}
+
+.containerpaiement form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.containerpaiement form .inputBox input,
+.containerpaiement form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.containerpaiement form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.containerpaiement form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.containerpaiement form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, #1797BF, #17C4FB);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.containerpaiement form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.containerpaiement .card-containerpaiement{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.containerpaiement .card-containerpaiement .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, #1797BF, #17C4FB);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.containerpaiement .card-containerpaiement .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.containerpaiement .card-containerpaiement .front .image img{
+    height: 50px;
+}
+
+.containerpaiement .card-containerpaiement .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.containerpaiement .card-containerpaiement .front .flexbox{
+    display: flex;
+}
+
+.containerpaiement .card-containerpaiement .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.containerpaiement .card-containerpaiement .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.containerpaiement .card-containerpaiement .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(135deg, #17C4FB, #1797BF);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.containerpaiement .card-containerpaiement .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.containerpaiement .card-containerpaiement .back .box{
+    padding: 0 20px;
+}
+
+.containerpaiement .card-containerpaiement .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.containerpaiement .card-containerpaiement .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.containerpaiement .card-containerpaiement .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+/* ***************************************************************************************************************
 *****************************************     MEDIA QUERIES       ************************************************
 *****************************************************************************************************************/
 
@@ -731,6 +916,10 @@ li:focus ul li a {
     }
 
     #imgproduitpanier{
+        width: 100% !important;
+    }
+
+    #imgproduitpaiement{
         width: 100% !important;
     }
 
@@ -803,6 +992,10 @@ li:focus ul li a {
     }
 
     #imgproduitpanier{
+        width: 100% !important;
+    }
+
+    #imgproduitpaiement{
         width: 100% !important;
     }
 
@@ -894,6 +1087,10 @@ li:focus ul li a {
         width: 100% !important;
     }
 
+    #imgproduitpaiement{
+        width: 100% !important;
+    }
+
     .panierinterieur, .panierheader, .panierfdp{
         font-size: 12px;
     }
@@ -969,6 +1166,10 @@ li:focus ul li a {
         width: 50% !important;
     }
 
+    #imgproduitpaiement{
+        width: 50% !important;
+    }
+
     #imgproduitcarte{
         width: 50%;
     }
@@ -1022,6 +1223,10 @@ li:focus ul li a {
         width: 50% !important;
     }
 
+    #imgproduitpaiement{
+        width: 50% !important;
+    }
+
     #imgproduitcarte{
         width: auto;
         height: 100%;
@@ -1040,5 +1245,9 @@ li:focus ul li a {
 
     #imgproduitpanier{
         width: 50% !important;
+    }
+
+    #imgproduitpaiement{
+        width: 20% !important;
     }
 }
