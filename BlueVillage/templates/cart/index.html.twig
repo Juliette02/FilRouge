@@ -69,7 +69,7 @@
 
                         {% if app.user and is_granted('ROLE_ADMIN') == false %}
 
-                        <button class="btnpayer"><a href="{{ path('app_paiement') }}">Payer</button>
+                        <a href="{{ path('app_paiement') }}"><button class="btnpayer">Payer </button></a>
 
                         {% elseif app.user == false %}
 

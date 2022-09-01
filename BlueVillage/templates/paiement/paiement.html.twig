@@ -53,6 +53,66 @@
         </table>
         </div>
 
+
+<form class="form-control" id="formmodifpaiement">
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="nom" value="{{ app.user.client.nom }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="prenom" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="prenom" value="{{ app.user.client.prenom }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="adresseliv" class="form-label">Adresse de livraison</label>
+                    <input type="text" class="form-control" id="adresseliv" value="{{ app.user.client.adresseLivraison }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="cpliv" class="form-label">Code Postal de livraison</label>
+                    <input type="text" class="form-control" id="cpliv" value="{{ app.user.client.cpLivraison }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="villeliv" class="form-label">Ville de livraison</label>
+                    <input type="text" class="form-control" id="villeliv" value="{{ app.user.client.villeLivraison }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="checkboxliv">L Adresse de facturation est elle differente ?</label>
+                    <input type="checkbox" id="checkboxliv123" onclick ="myFunction3()"> 
+                </div>
+
+
+                <div id="inputfacturation">
+                    <div class="mb-3">
+                        <label for="adressefac" class="form-label">Adresse de facturation</label>
+                        <input type="text" class="form-control" id="adressefac" value="{{ app.user.client.adresseFacture }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cpfac" class="form-label">Code Postal de facturation</label>
+                        <input type="text" class="form-control" id="cpfac" value="{{ app.user.client.cpFacture }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="villefac" class="form-label">Ville de facturation</label>
+                        <input type="text" class="form-control" id="villefac" value="{{ app.user.client.villeFacture }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
 <div class="containerpaiement">
 
     <div class="card-containerpaiement">
@@ -137,9 +197,9 @@
                 <input type="text" maxlength="3" class="cvv-input">
             </div>
         </div>
-        <input type="submit" value="PAYE !!!" class="submit-btn">
-    </form>
+        <a href="{{ path('paiement_remove') }}" id="btnsubmitpaiement" onclick="payer()">Paye !!!</a>
 
+    </form>
 </div>
 
 
@@ -173,6 +233,12 @@ document.querySelector('.cvv-input').onmouseleave = () =>{
 
 document.querySelector('.cvv-input').oninput = () =>{
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+}
+
+function payer(){
+    const route = "{{ path('rubrique') }}";
+    window.alert("Votre commande est pris en compte");
+    window.location = (route);
 }
 
 </script>

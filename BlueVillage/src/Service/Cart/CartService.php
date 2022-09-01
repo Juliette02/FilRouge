@@ -51,6 +51,15 @@ class CartService
         $this->session->set('panier', $panier); //On dit que le panier de la session devient le panier modifié
     }
 
+    public function removeAll()
+    {
+        $panier = $this->session->get('panier', []);//On récupère le panier de la session, si vide le panier est un tableau vide
+        
+        unset($panier);
+    
+        $this->session->set('panier', []); //On dit que le panier de la session devient le panier modifié
+    }
+
 
     //Permet d'obtenir l'intégralité du panier
     public function getFullCart(): array
