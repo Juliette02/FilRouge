@@ -27,7 +27,11 @@
 
         <div class="navmilieu">
             <a href="{{ path('rubrique') }}">The Blue Village</a>
-            <input type="text" class="search" placeholder="Rechercher">
+            {# <input type="text" class="search" placeholder="Rechercher"> #}
+            {{ render(controller(
+                'App\\Controller\\SearchController::searchBar'
+            )) }}
+            {# {{ path('app_searchBar') }} #}
         </div>
         
         <div class="navdroite">
@@ -157,6 +161,9 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
             {% endblock %}
 
             {% block clients %}
+            {% endblock %}
+
+            {% block search %}
             {% endblock %}
 
                         {% if message is defined %}

@@ -63,4 +63,22 @@ class ProduitRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+    // Rechercher des produits en fonction de mot entrer
+    /*
+    * @return void
+    */
+    public function Search($mots = null)
+    {
+        $query =$this->createQueryBuilder('p');
+
+        if($mots != null) {
+            $query
+                ->join('p.rubrique', 'r')
+                ->where('(p.libelleCourt LIKE :mots) OR (p.libelleLong LIKE :mots) OR (r.nom LIKE :mots)')
+                ->setParameter('mots', '%' . $mots . '%');
+        }
+        
+        return $query->getQuery()->getResult();
+    }
 }
