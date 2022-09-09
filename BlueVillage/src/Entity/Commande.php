@@ -6,43 +6,78 @@ use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CommandeRepository;
 use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 #[ORM\Entity(repositoryClass: CommandeRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['read:clients']]
+)]
 class Commande
 {
     
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    /**
+     * * @Groups("read:clients")
+     */
     private $id;
 
     #[ORM\Column(type: "date")]
+    /**
+     * * @Groups("read:clients")
+     */
     private $date;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $adresseLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $cpLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $villeLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $adresseFacture;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $cpFacture;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $villeFacture;
 
     #[ORM\Column(type: "date")]
+    /**
+     * * @Groups("read:clients")
+     */
     private $dateFacture;
 
     #[ORM\Column(type: "decimal", precision: 19, scale: 4, nullable: true)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $total;
 
 

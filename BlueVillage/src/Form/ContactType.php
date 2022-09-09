@@ -4,8 +4,8 @@ namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -20,8 +20,11 @@ class ContactType extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
-            ->add('message', CKEditorType::class, [
+            ->add('message', TextareaType::class, [
                 'label' => 'Votre message',
+                'attr' => [
+                    'rows' => 8
+                ]
             ])
             ->add('Envoyer', SubmitType::class, [
                 'attr' => [

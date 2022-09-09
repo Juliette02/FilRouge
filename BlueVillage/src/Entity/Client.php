@@ -2,41 +2,73 @@
 
 namespace App\Entity;
 
-use App\Repository\ClientRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ClientRepository;
+use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ClientRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['read:clients']]
+)]
 class Client
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    /**
+     * * @Groups("read:clients")
+     */
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $categorie;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $adresseLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $cpLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $villeLivraison;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $adresseFacture;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $cpFacture;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $villeFacture;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $modePaiement;
 
     #[ORM\Column(type: "decimal", precision: 5, scale: 2, nullable: true)]
@@ -46,15 +78,27 @@ class Client
     private $coefficient;
 
     #[ORM\Column(type: "string", length: 255, nullable: true)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $numeroSiret;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $nom;
 
     #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $prenom;
 
     #[ORM\Column(type: "string", length: 255, nullable: true)]
+    /**
+     * * @Groups("read:clients")
+     */
     private $nomEntreprise;
 
 

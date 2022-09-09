@@ -1,0 +1,88 @@
+.list{
+    display: flex;
+    width: 100%;
+    
+    .listContainer{
+        flex:6;
+
+
+
+        .liens{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgb(161, 156, 156);
+
+            .addIcon{
+                margin-top: 15px;
+                padding: 2px 5px;
+                border-radius: 5px;
+                color: rgb(8, 156, 169);
+                border: 1px dotted rgba(56, 142, 199, 0.596);
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover{
+                    color: white;
+                    background-color: rgb(8, 156, 169);
+                }
+            }
+
+        }
+
+        .table{
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+            padding: 20px;
+            margin: 20px;
+            max-width: 95%;
+
+
+                .cellTitle{
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: rgb(127, 124, 124);
+                    width: 30%;
+                }
+                
+                .cellContent{
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: rgb(127, 124, 124);
+                }
+
+
+                .updateButton{
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    color: rgb(8, 156, 169);
+                    border: 1px solid rgba(56, 142, 199, 0.596);
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: white;
+                        background-color: rgb(8, 156, 169);
+                    }
+                }
+
+                .deleteButton{
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    color: crimson;
+                    border: 1px solid rgba(220, 20, 60, 0.6);
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: white;
+                        background-color: crimson;
+                    }
+                }
+            
+        }
+    }
+}
