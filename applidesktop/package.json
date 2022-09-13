@@ -54,5 +54,9 @@
     "electron": "^20.1.1",
     "electron-is-dev": "^2.0.0",
     "wait-on": "^6.0.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
