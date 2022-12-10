@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre panier{% endblock %}
+
+{% block panier %}
+
+    <h1 id="titrepanier">Votre panier</h1>
+
+<div class="container-fluid g-0" id="bodypanier">
+<div class="row d-flex justify-content-center">
+<div class="col-xs-12 col-sm-12 col-md-9">
+
+
+
+    {# Si le nombre de produit dans le panier > 0 alors on affiche le tableau #}
+    {% if items | length > 0 %}
+        <table class="table">
+            <thead>
+                <tr class="panierheader">
+                    <th class="col-4">Produit</th>
+                    <th></th>
+                    <th>Prix</th>
+                    <th>Qté</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {# Pour chaque produit dans le panier on affiche son nom, son prix, sa quantité, et son total #}
+                {% for item in items %}
+                    <tr class="panierinterieur">
+                        <td id="bgpanier"><img src="/upload/img/produit/{{ item.produit.photo }}" id="imgproduitpanier"></td>
+                        <td>{{ item.produit.LibelleCourt }}</td>
+                        <td>{{ item.produit.prixHorsTaxe }} €</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.produit.prixHorsTaxe * item.quantity }} €</td>
+                        <td>
+                        {# Bouton pour supprimer un produit du panier #}
+                            <a href="{{ path('cart_remove', {'id': item.produit.id }) }}" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                    {% if items | length > 0 %}
+                        <tr class="panierfdp">
+                            <td id="bgpanier"><img src="/upload/img/frais-de-livraison-.jpg" class="w-25" id="imgproduitpanier"></td>
+                            <td>Frais de port</td>
+                            <td>10.00 €</td>
+                            <td>1</td>
+                            <td>10.00 €</td>
+                            <td></td>
+                        </tr>
+                    {% endif %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-end">Total :</td>
+                    <td>{{ total }} €</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        <div class="col-6 col-sm-3 col-md-3" id="cardpaniercenter">
+            <div class="cardpanier">
+                <p> Montant total : {{ total }} €</p>
+                    <div class="divpayer">
+
+                        {% if app.user and is_granted('ROLE_ADMIN') == false %}
+
+                        <a href="{{ path('app_paiement') }}"><button class="btnpayer">Payer </button></a>
+
+                        {% elseif app.user == false %}
+
+                        <button class="btnpayer" id="btnpayernonvalide">Payer</button> <br>
+
+                        <span class="msgconnexion">Veuillez vous connecté</span>
+
+                        {% endif %}
+                    </div>            
+                    </div>
+        </div>
+            
+
+{# Si le nombre de produit dans le panier < 0 alors on affiche que le panier est vide #}
+    {% else %}
+    </div>
+        <div class="paniervide">
+            <div class="cardpaniervide">
+                <p>Votre panier est vide !</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+</div>
+
+    <div class="panierfooter">
+        <div class="panierfooter1">
+            <hr>
+                <a href="{{ path('rubrique') }}"><i class="fa-solid fa-plus"></i>Ajouter un article</a>
+                            <hr>
+            {% if items | length > 0 %}
+                <a href="#"><i class="fa-solid fa-print"></i>Imprimer la facture</a>
+                            <hr>
+    {% endif %}
+        </div>
+    </div>
+
+    <div class="panierfooterbot">
+        <div class="panierfooter2">
+            <h3> Informations sur l'achat</h3>
+                <hr>
+                    <ul>
+                        <li id="info1" tabindex="0"><a href="#"><i class="fa-solid fa-plus"></i>Garantie</a>
+                            <ul>
+                                <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptas minus earum corrupti voluptate eos animi impedit sequi ducimus? Sapiente sint, 
+                                tenetur dolorem nesciunt eius veritatis! Fugiat eaque itaque sequi quo dignissimos provident molestiae vero quasi, 
+                                nobis commodi assumenda iusto molestias perferendis. Non maxime velit consequuntur ipsum in dolorum molestiae sint 
+                                doloremque explicabo minus asperiores ex, consectetur adipisci totam incidunt dolorem maiores aut eius atque perspiciatis 
+                                expedita tenetur tempora. Quasi, consectetur. Libero at autem ullam rem quam fugit rerum nisi voluptatum temporibus delectus. 
+                                Facilis dolor mollitia ipsam neque pariatur repudiandae minus saepe, voluptatem culpa quo, cumque tempora hic beatae! 
+                                Dolor, impedit.</p></li>
+                            </ul>
+                            </li>
+                        <hr>
+                        <li id="info1" tabindex="0"><a href="#"><i class="fa-solid fa-plus"></i>Sécurité de paiement maximale</a>
+                            <ul>
+                                <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptas minus earum corrupti voluptate eos animi impedit sequi ducimus? Sapiente sint, 
+                                tenetur dolorem nesciunt eius veritatis! Fugiat eaque itaque sequi quo dignissimos provident molestiae vero quasi, 
+                                nobis commodi assumenda iusto molestias perferendis. Non maxime velit consequuntur ipsum in dolorum molestiae sint 
+                                doloremque explicabo minus asperiores ex, consectetur adipisci totam incidunt dolorem maiores aut eius atque perspiciatis 
+                                expedita tenetur tempora. Quasi, consectetur. Libero at autem ullam rem quam fugit rerum nisi voluptatum temporibus delectus. 
+                                Facilis dolor mollitia ipsam neque pariatur repudiandae minus saepe, voluptatem culpa quo, cumque tempora hic beatae! 
+                                Dolor, impedit.</p></li>
+                                </ul>
+                            </li>
+                        <hr> 
+                        <li id="info1" tabindex="0"><a href="#"><i class="fa-solid fa-plus"></i>Que se passe-t-il ensuite ?</a>
+                            <ul>
+                                <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptas minus earum corrupti voluptate eos animi impedit sequi ducimus? Sapiente sint, 
+                                tenetur dolorem nesciunt eius veritatis! Fugiat eaque itaque sequi quo dignissimos provident molestiae vero quasi, 
+                                nobis commodi assumenda iusto molestias perferendis. Non maxime velit consequuntur ipsum in dolorum molestiae sint 
+                                doloremque explicabo minus asperiores ex, consectetur adipisci totam incidunt dolorem maiores aut eius atque perspiciatis 
+                                expedita tenetur tempora. Quasi, consectetur. Libero at autem ullam rem quam fugit rerum nisi voluptatum temporibus delectus. 
+                                Facilis dolor mollitia ipsam neque pariatur repudiandae minus saepe, voluptatem culpa quo, cumque tempora hic beatae! 
+                                Dolor, impedit.</p></li>
+                                </ul>
+                            </li>
+                        <hr> 
+                        <li id="info1" tabindex="0"><a href="#"><i class="fa-solid fa-plus"></i>Mode de paiement</a>
+                            <ul>
+                                <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptas minus earum corrupti voluptate eos animi impedit sequi ducimus? Sapiente sint, 
+                                tenetur dolorem nesciunt eius veritatis! Fugiat eaque itaque sequi quo dignissimos provident molestiae vero quasi, 
+                                nobis commodi assumenda iusto molestias perferendis. Non maxime velit consequuntur ipsum in dolorum molestiae sint 
+                                doloremque explicabo minus asperiores ex, consectetur adipisci totam incidunt dolorem maiores aut eius atque perspiciatis 
+                                expedita tenetur tempora. Quasi, consectetur. Libero at autem ullam rem quam fugit rerum nisi voluptatum temporibus delectus. 
+                                Facilis dolor mollitia ipsam neque pariatur repudiandae minus saepe, voluptatem culpa quo, cumque tempora hic beatae! 
+                                Dolor, impedit.</p></li>
+                            </ul>
+                            </li>
+                        <hr>                 
+                    </ul>
+        </div>
+    </div>
+
+
+{% endblock %}

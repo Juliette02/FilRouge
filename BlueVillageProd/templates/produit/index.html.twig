@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits{% endblock %}
+
+{% block produit %}
+
+    {# <a href="{{ path('rubrique') }}">Rurbiques</a> #}
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('app_produit_new') }}" class="btn btn-outline-info mt-2">Ajouter un produit</a>
+    {% endif %}
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('sousRubrique', {'id':rub.rubrique.id }) }}">{{ rub.rubrique.nom}}<i class="fa-solid fa-angle-right mx-2"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link disabled" aria-current="page" href="#">{{ rub.nom }}</a>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        {% for produit in produits %}
+        <ul class="cards_produit">
+                <a href="{{ path('app_produit_show', {'id': produit.id}) }}">
+                    <li class="cards__item_produit">
+                        <div class="card_produit">
+                        <div class="card__image_produit"> 
+                            <img src="/upload/img/produit/{{ produit.photo }}"                
+                            </div>
+                        <div class="card__content_produit">
+                                <h5 class="card-title fs-3 fw-bold" id="nomproduit">{{ produit.libelleCourt }}</h5>
+                                    <p class="card-text fs-1 fw-bold" id="prixproduit"><small class"text-muted">{{ produit.prixHorsTaxe }}€</small></p>
+                                <a href="{{ path('cart_add', {'id': produit.id }) }}"><i class="fa-solid fa-cart-plus"></i></a> 
+                        </div>
+                        </div>     
+                    </li>
+                </a>
+            </ul>
+            
+        {% else %}
+           
+                <div colspan="8">Aucun résultat pour votre recherche
+                    {# Au cas ou il ne trouve pas de produit #}
+                </div>
+        {% endfor %}
+
+
+
+{% endblock %}
