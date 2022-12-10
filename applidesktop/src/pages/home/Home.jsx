@@ -7,7 +7,7 @@ import { List } from "../../components/table/Table";
 import { Widget } from "../../components/widget/Widget";
 import './Home.scss'
 
-const Home = () => {
+const Home = (props) => {
     return(
         <div className="home">
             <Sidebar/>
@@ -19,9 +19,18 @@ const Home = () => {
                     <Widget type="earnings"/>
                     <Widget type="balance"/>
                 </div>
+                    <p>Chiffre d'affaires mois par mois : </p>
                 <div className="charts">
+                    <Chart data={props.caperyear}/>
                     <Featured/>
-                    <Chart/>
+                </div>
+                    <p>Chiffre d'affaires par fournisseur : </p>
+                <div className="charts">
+                    <Chart data={props.caperfou}/>
+                </div>
+                    <p>Chiffre d'affaires par type de client : </p>
+                <div className="charts">
+                    <Chart data={props.caperclients}/>
                 </div>
                 <div className="listContainer">
                     <div className="listTitle">Dernières commandes</div>

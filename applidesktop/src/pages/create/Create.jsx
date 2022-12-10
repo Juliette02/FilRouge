@@ -22,10 +22,19 @@ const Create = (props) => {
             'prixHorsTaxe': prixHorsTaxe,
             'rubrique': rubrique,
             'fournisseur': fournisseur
-        }
+        };
+
+        const libellecourt = document.getElementById('nom');
+        const Elibellecourt = '';
+        const c = /^[a-zA-Z\s\d\à\é\'\"\/\-\^\&\â\ê\î\ô\û\ä\ë\ï\ö\ü\ç\(\)\è]+$/;
+        if (libellecourt.value == "") {
+             Elibellecourt = 'Veuillez entrer un libellé court !';
+        } else {
+             Elibellecourt = '';
+        }document.getElementById("Elibellecourt").innerHTML = Elibellecourt;
 
         /*Requête de création*/
-        fetch('https://alexis.amorce.org/api/produits', {
+        fetch('https://127.0.0.1/api/produits', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -86,6 +95,7 @@ const Create = (props) => {
                                 <label htmlFor='nom'>Nom</label><br />
                                 <input type="text" id="nom" name="libelleCourt" placeholder='Produit trop génial' value={libelleCourt} onChange={(e) => setLibelleCourt(e.target.value)} /><br />
                             </div>
+                                <p id="Elibellecourt"></p>
 
                             <div className='formInput'>
                                 <label htmlFor='description'>Description</label><br />

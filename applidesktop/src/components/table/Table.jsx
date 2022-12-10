@@ -74,7 +74,7 @@ const List = () => {
             cp_facture: "30501",
             ville_facture: "Gainesville",
             date_facture: "2022-06-03",
-            status: "Livraison",
+            status: "Livré",
         },
         {
             id: 6,

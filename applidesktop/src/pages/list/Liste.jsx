@@ -20,7 +20,7 @@ const Read = (props) => {
 
     /* Fonction pour supprimer un produit par son id */
     const onDelete = (id) => {
-        fetch(`https://alexis.amorce.org/api/produits/${id}`, { method: 'DELETE' }) /*Requête de suppression*/
+        fetch(`https://127.0.0.1/api/produits/${id}`, { method: 'DELETE' }) /*Requête de suppression*/
             .then(
                 props.onChange() /*On remonte le changement dans App.jsx pour mettre à jour la liste sans le produit supprimé */
             );

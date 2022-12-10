@@ -63,7 +63,7 @@ class DetailCommandeRepository extends ServiceEntityRepository
         $query = $this->createQueryBuilder('dc');
 
         $query
-            ->select('SUM(dc.prixVente * dc.quantiteArticle) AS CAF, f.nom as Fournisseur')
+            ->select('SUM(dc.prixVente * dc.quantiteArticle) AS CA, f.nom as date')
             ->join('dc.produit', 'p')
             ->join('p.fournisseur', 'f')
             ->groupBy('Fournisseur');

@@ -15,7 +15,7 @@ const Update = (props) => {
     const { id: produitId } = useParams()
 
     useEffect(() => {
-        fetch(`https://alexis.amorce.org/api/produits/${produitId}`).then((res) => res.json()).then(res => setProduit({ loading: false, data: res })).catch(e => console.log(e));
+        fetch(`https://127.0.0.1/api/produits/${produitId}`).then((res) => res.json()).then(res => setProduit({ loading: false, data: res })).catch(e => console.log(e));
     }, [])
 
     const [file, setFile] = useState('');
