@@ -35,12 +35,6 @@ class Produit
      */
     private $libelleLong;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    /**
-     * * @Groups("read:produit")
-     */
-    private $referenceFournisseur;
-
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     /**
      * * @Groups("read:produit")
@@ -121,18 +115,7 @@ class Produit
         return $this;
     }
 
-    public function getReferenceFournisseur(): ?string
-    {
-        return $this->referenceFournisseur;
-    }
-
-    public function setReferenceFournisseur(string $referenceFournisseur): self
-    {
-        $this->referenceFournisseur = $referenceFournisseur;
-
-        return $this;
-    }
-
+   
     public function getPhoto(): ?string
     {
         return $this->photo;
@@ -192,8 +175,6 @@ class Produit
 
         return $this;
     }
-
-
 
     /**
      * @return Collection<int, DetailCommande>

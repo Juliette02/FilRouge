@@ -210,7 +210,6 @@ class AppFixtures extends Fixture
             $produits
             ->setLibelleCourt($pro['libelle_court'])
             ->setLibelleLong($pro['libelle_long'])
-            ->setReferenceFournisseur($pro['reference_fournisseur'])
             ->setPhoto($pro['photo_produit'])
             ->setPrixAchat($pro['prix_achat'])
             ->setPrixHorsTaxe($pro['prix_hors_taxe']);

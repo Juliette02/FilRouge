@@ -1,73 +1,102 @@
-id_pro          INT AUTO-INCREMENT      Numéro d'identification du produit
-lib_cou_pro     varchar(255)            Libellé court du produit
-lib_lon_pro     varchar(255)            Libellé long du produit
-ref_fou_pro     varchar(255)            Référence fournisseur du produit
-pho_pro         varchar(255)            Photo du produit
-pri_ach_pro     DECIMAL(19,4)           Prix d'achat du produit
-pri_ht_pro      DECIMAL(19,4)           Prix hors taxes du produit
-ctg_pro         VARCHAR(255)            Catégorie du produit
-id_rub          INT                     Numéro de la rubrique du produit
-id_liv          INT                     Numéro d'identification du livreur
-id_fou          INT                     Numéro d'identification du fournisseur
+TABLE PRODUIT :
+id		          	INT AUTO-INCREMENT      Numéro d'identification du produit
+libelle_court		  	varchar(255)            Libellé court du produit
+libelle_long			varchar(255)            Libellé long du produit
+photo			        varchar(255)            Photo du produit
+prix_achat			DECIMAL(19,4)           Prix d'achat du produit
+prix_hors_taxe			DECIMAL(19,4)           Prix hors taxes du produit
+rubrique_id          		INT                     Numéro de la rubrique du produit
+fournisseur_id          	INT                     Numéro d'identification du livreur
 
 
-id_cli          INT AUTO-INCREMENT      Numéro d'identification du client
-cat_cli         varchar(255)            Catégorie du client
-adr_liv_cli     varchar(255)            Adresse de livraison du client
-adr_fac_cli     varchar(255)            Adresse de facturation du client
-mod_pai_cli     varchar(255)            Mode de paiement du client
-red_cli         DECIMAL(5,2)            Réduction client
-coe_cli         DECIMAL(5,2)            Coefficient du client
-num_sir_cli     VARCHAR(255)            Numéro de siret si entreprise
-nom_cli         VARCHAR(255)            Nom du client
-pre_cli         VARCHAR(255)            Prénom du client
-nom_ent_cli     VARCHAR(255)            Nom de l'entreprise
+TABLE CLIENT:
+id			        INT AUTO-INCREMENT      Numéro d'identification du client
+categorie		        varchar(255)            Catégorie du client
+adresse_livraison		varchar(255)            Adresse de livraison du client
+cp_livraison			varchar(255)		Code postal de livraison
+ville_livraison			varchar(255)		Ville de livraison
+adresse_facturation		varchar(255)            Adresse de facturation du client
+cp_facturation			varchar(255) 		Code postal de facturation
+ville_facturation 		varchar(255)		Ville de facturation
+mode_paiement			varchar(255)            Mode de paiement du client
+reduction			DECIMAL(5,2)            Réduction client
+coefficient		        DECIMAL(5,2)            Coefficient du client
+numero_siret			VARCHAR(255)            Numéro de siret si entreprise
+nom         			VARCHAR(255)            Nom du client
+prenom         			VARCHAR(255)            Prénom du client
+nom_entreprise			VARCHAR(255)            Nom de l'entreprise
 
 
-id_com          INT AUTO-INCREMENT      Numéro d'identification du commercial
-nom_com         varchar(255)            Nom du commercial
-pre_com         varchar(255)            Prénom du commercial
-adr_com         VARCHAR(255)            adresse du commercial
-ema_com         varchar(255)            email du commercial
-tel_com         varchar(255)            telephone du commercial
+TABLE COMMERCIAL:
+id			        INT AUTO-INCREMENT      Numéro d'identification du commercial
+nom			        varchar(255)            Nom du commercial
+prenom			        varchar(255)            Prénom du commercial
+adresse			        varchar(255)            adresse du commercial
+cp				varchar(255)		Code postal du commercial
+ville				varchar(255)		Ville du commercial
+email			        varchar(255)            email du commercial
+telephone		        varchar(255)            telephone du commercial
 
 
-id_fou          INT AUTO-INCREMENT      Numéro d'identiiant du fournisseur
-nom_fou         varchar(255)            Nom du fournisseur
-adr_fou         varchar(255)            Adresse du fournisseur
-ema_fou         varchar(255)            email du fournisseur
-tel_fou         varchar(255)            telephone du fournisseur
+TABLE FOURNISSEUR:
+id			        INT AUTO-INCREMENT      Numéro d'identiiant du fournisseur
+nom			        varchar(255)            Nom du fournisseur
+adresse			        varchar(255)            Adresse du fournisseur
+cp				varchar(255)		Code postal du fournisseur
+ville				varchar(255)		Ville du fournisseur
+email			        varchar(255)            email du fournisseur
+telephone		        varchar(255)            telephone du fournisseur
 
 
-id_cat          INT AUTO-INCREMENT      Numéro d'identification du catalogue
-sto_cat         INT                     Stock disponible
-nvx_pro_cat     varchar(255)            Noms des nouveaux produits
-des_pro_cat     varchar(255)            Noms des produits désactivés
+TABLE LIVRAISON:
+id			        INT AUTO-INCREMENT      Numéro d'identificcation de la livraison
+commande_id			INT			Commande ID
+date				DATE			Date de livraison
+adresse				varchar(255)		Adresse de livraison
+cp				varchar(255)		Code postal de livraison
+ville				varchar(255)		Ville de livraison
 
 
-id_fac          INT AUTO-INCREMENT      Numéro d'dentification de la facture
-dat_fac         DATE                    Date de la facture
-id_cli          INT                     Numéro d'identification du client
-id_cmd          INT                     Numéro de commande
-adr_fac         varchar(255)            adresse de facturation
+TABLE COMMANDE:
+id			        INT AUTO-INCREMENT      Numéro d'identification de la commande
+date			        DATE                    Date de commande
+adresse_livraison		varchar(255)            Adresse de la livraison de la commande
+cp_livraison			varchar(255)		Code postal de la livraison de la commande
+adresse_facture			varchar(255)            Adresse de la facture de la commande
+cp_facture			varchar(255)		Code postal de la facture de la commande
+ville_facture			varchar(255)		Ville de la facture de la commande
+date_facture			varchar(255)		Date de la facture de la commande
+total				Decimal(19,4)		Prix total de la commande
+client_id			INT 			ID du client
 
 
-id_liv          INT AUTO-INCREMENT      Numéro d'identificcation de la livraison
-qte_pro_liv     INT                     Quantité du produit livré
-dat_liv         DATE                    Date de livraison
+TABLE RUBRIQUE:
+id			        INT AUTO_INCREMENT      Numéro d'identification de la rubrique
+nom         			VARCHAR(255)            Nom de la rubrique
+rubrique_id			INT			ID de la sous rubrique
+photo				varchar(255)		Photo de la rubrique
 
 
-id_cmd          INT AUTO-INCREMENT      Numéro d'identification de la commande
-dat_cmd         DATE                    Date de commande
-adr_liv_cmd     varchar(255)            Adresse de la livraison de la commande
-adr_fac_cmd     varchar(255)            Adresse de la facturation de la commande
-tot_cmd         DECIMAL(19,4)           Prix total de la commande
-
-id_rub          INT AUTO_INCREMENT      Numéro d'identification de la rubrique
-nom_rub         VARCHAR(255)            Nom de la rubrique
+TABLE USER:
+ID				INT AUTO_INCREMENT	ID du user
+client_id			INT			ID du client
+email				varchar(255)		Email du user
+roles				longtext		Role du user
+password			varchar(255)		Mot de passe du user
 
 
-qte_art         INT                     Quantité d'article dans la commande
-pri_ven         DECIMAL(19,4)           Prix de vente du produit (HT+Coefficient)
-tva_pro         DECIMAL(5,2)            TVA appliquée au produit
+TABLE LIVRAISON_PRODUIT:
+id 				INT AUTO_INCREMENT	ID de la livraison produit
+produit_id			INT 			ID du produit
+livraison_id			INT			ID de la livraison
+quantite_produit_livre		INT			Quantite des produits livrés
 
+
+TABLE DETAIL_COMMANDE:
+id				INT AUTO_INCREMENT	ID du detail commande
+commande_id			INT			ID de la commande
+produit_id			INT			ID des produits
+quantite_article		INT			Quantité des articles
+prix_vente			DECIMAL(19,4)		Prix de vente
+prix_hors_taxe			DECIMAL(19,4)		Prix Hors taxe
+tva_produit			DECIMAL(5,2)		TVA des produits

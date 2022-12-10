@@ -39,6 +39,19 @@ class LivraisonRepository extends ServiceEntityRepository
         }
     }
 
+//Nombre de commandes en cours de livraison.
+    public function NbCommandesLivraison() {
+
+        $query = $this->createQueryBuilder('l');
+
+        $query
+            ->select('COUNT(l.commande) AS EnCoursDeLivraison')
+            ->where('l.date > :date')
+            ->setParameter(':date', new \DateTime('now'));
+
+        return $query->getQuery()->getResult();
+    }
+
 //    /**
 //     * @return Livraison[] Returns an array of Livraison objects
 //     */

@@ -1,131 +1,144 @@
-DROP DATABASE if EXISTS VillageGreen;
+DROP DATABASE if EXISTS BlueVillage;
 
-CREATE DATABASE VillageGreen;
+CREATE DATABASE BlueVillage;
 
-USE VillageGreen;
+USE BlueVillage;
 
-CREATE TABLE Client(
-   id_cli INT AUTO_INCREMENT NOT NULL,
-   cat_cli VARCHAR(255) NOT NULL ,
-   adr_liv_cli VARCHAR(255) NOT NULL ,
-   adr_fac_cli VARCHAR(255) NOT NULL ,
-   mod_pai_cli VARCHAR(255) NOT NULL ,
-   red_cli DECIMAL(5,2)  DEFAULT NULL ,
-   coe_cli DECIMAL(5,2) NOT NULL  ,
-   num_sir_cli VARCHAR(255) DEFAULT NULL  ,
-   nom_cli VARCHAR(255) NOT NULL ,
-   pre_cli VARCHAR(255) NOT NULL ,
-   nom_ent_cli VARCHAR(255) DEFAULT NULL ,
-   PRIMARY KEY(id_cli)
+CREATE TABLE client(
+   id INT AUTO_INCREMENT NOT NULL,
+   categorie VARCHAR(255) NOT NULL ,
+   adresse_livraison VARCHAR(255) NOT NULL ,
+   cp_livraison VARCHAR(255) NOT NULL ,
+   ville_livraison VARCHAR(255) NOT NULL ,
+   adresse_facture VARCHAR(255) NOT NULL ,
+   cp_facture VARCHAR(255) NOT NULL ,
+   ville_facture VARCHAR(255) NOT NULL ,
+   mode_paiement VARCHAR(255) NOT NULL ,
+   reduction DECIMAL(5,2)  DEFAULT NULL ,
+   coefficient DECIMAL(5,2) NOT NULL  ,
+   numero_siret VARCHAR(255) DEFAULT NULL  ,
+   nom VARCHAR(255) NOT NULL ,
+   prenom VARCHAR(255) NOT NULL ,
+   nom_entreprise VARCHAR(255) DEFAULT NULL ,
+   PRIMARY KEY(id)
 );
-CREATE INDEX Num_Cli ON Client(id_cli);
+CREATE INDEX numero_client ON client(id);
 
-
-CREATE TABLE Commercial(
-   id_com INT AUTO_INCREMENT NOT NULL ,
-   nom_com VARCHAR(255) NOT NULL ,
-   pre_com VARCHAR(255) NOT NULL ,
-   adr_com VARCHAR(255) NOT NULL,
-   ema_com VARCHAR(255) NOT NULL,
-   tel_com VARCHAR(255) NOT NULL,
-   PRIMARY KEY(id_com)
-);
-
-CREATE TABLE Catalogue(
-   id_cat INT NOT NULL ,
-   sto_cat INT NOT NULL ,
-   nvx_pro_cat VARCHAR(255) DEFAULT NULL ,
-   des_pro_cat VARCHAR(255) DEFAULT NULL ,
-   PRIMARY KEY(id_cat)
+CREATE TABLE users(
+   id INT AUTO_INCREMENT NOT NULL,
+   client_id INT,
+   email VARCHAR(255) NOT NULL,
+   roles LONGTEXT NOT NULL,
+   password VARCHAR(255) NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(client_id) REFERENCES client(id)
 );
 
-CREATE TABLE Fournisseur(
-   id_fou INT AUTO_INCREMENT NOT NULL ,
-   nom_fou VARCHAR(255) NOT NULL ,
-   adr_fou varchar(255) not null,
-   ema_fou varchar(255) not null,
-   tel_fou varchar(255) not null
-   PRIMARY KEY(id_fou)
+CREATE TABLE commercial(
+   id INT AUTO_INCREMENT NOT NULL ,
+   nom VARCHAR(255) NOT NULL ,
+   prenom VARCHAR(255) NOT NULL ,
+   adresse VARCHAR(255) NOT NULL,
+   cp VARCHAR(255) NOT NULL,
+   ville VARCHAR(255) NOT NULL,
+   email VARCHAR(255) NOT NULL,
+   telephone VARCHAR(255) NOT NULL,
+   PRIMARY KEY(id)
 );
 
-CREATE TABLE Commande(
-   id_cmd INT AUTO_INCREMENT NOT NULL ,
-   dat_cmd DATE NOT NULL ,
-   adr_liv_cmd VARCHAR(255) NOT NULL  ,
-   adr_fac_cmd VARCHAR(255) NOT NULL ,
-   tot_cmd DECIMAL(19,4) NOT NULL ,
-   id_cli INT NOT NULL,
-   PRIMARY KEY(id_cmd),
-   FOREIGN KEY(id_cli) REFERENCES Client(id_cli)
-);
-CREATE INDEX Num_Cmd ON Commande(id_cmd);
-
-CREATE TABLE Livraison(
-   id_liv INT AUTO_INCREMENT NOT NULL ,
-   qte_pro_liv INT NOT NULL ,
-   dat_liv DATE NOT NULL ,
-   id_cmd INT NOT NULL,
-   adr_liv VARCHAR(255) NOT NULL,
-   PRIMARY KEY(id_liv),
-   FOREIGN KEY(id_cmd) REFERENCES Commande(id_cmd)
+CREATE TABLE fournisseur(
+   id INT AUTO_INCREMENT NOT NULL,
+   nom VARCHAR(255) NOT NULL,
+   adresse varchar(255) NOT NULL,
+   cp VARCHAR(255) NOT NULL,
+   ville VARCHAR(255) NOT NULL,
+   email varchar(255) NOT NULL,
+   telephone varchar(255) NOT NULL,
+   PRIMARY KEY(id)
 );
 
-CREATE TABLE Facture(
-   id_fac INT AUTO_INCREMENT NOT NULL ,
-   dat_fac DATE NOT NULL ,
-   id_cli INT NOT NULL,
-   id_cmd INT NOT NULL,
-   adr_fac varchar(255) not null,
-   PRIMARY KEY(id_fac),
-   FOREIGN KEY(id_cli) REFERENCES Client(id_cli),
-   FOREIGN KEY(id_cmd) REFERENCES Commande(id_cmd)
+CREATE TABLE commande(
+   id INT AUTO_INCREMENT NOT NULL ,
+   date DATE NOT NULL ,
+   adresse_livraison VARCHAR(255) NOT NULL  ,
+   cp_livraison VARCHAR(255) NOT NULL,
+   ville_livraison VARCHAR(255) NOT NULL,
+   adresse_facture VARCHAR(255) NOT NULL ,
+   cp_facture VARCHAR(255) NOT NULL,
+   ville_facture VARCHAR(255) NOT NULL,
+   date_facture DATE NOT NULL,
+   total DECIMAL(19,4) NOT NULL ,
+   client_id INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(client_id) REFERENCES client(id)
+);
+CREATE INDEX numero_commande ON commande(id);
+
+CREATE TABLE livraison(
+   id INT AUTO_INCREMENT NOT NULL ,
+   commande_id INT NOT NULL,
+   date DATE NOT NULL ,
+   adresse VARCHAR(255) NOT NULL,
+   cp VARCHAR(255) NOT NULL,
+   ville VARCHAR(255) NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(commande_id) REFERENCES commande(id)
 );
 
-CREATE TABLE Rubrique(
-   id_rub INT AUTO_INCREMENT NOT NULL ,
-   nom_rub VARCHAR(255) NOT NULL ,
-   id_rub_1 INT DEFAULT NULL,
-   PRIMARY KEY(id_rub),
-   FOREIGN KEY(id_rub_1) REFERENCES Rubrique(id_rub)
+CREATE TABLE rubrique(
+   id INT AUTO_INCREMENT NOT NULL ,
+   nom VARCHAR(255) NOT NULL ,
+   rubrique_id INT DEFAULT NULL,
+   photo VARCHAR(255) NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(rubrique_id) REFERENCES rubrique(id)
 );
-CREATE INDEX rub ON Rubrique(nom_rub);
+CREATE INDEX rubrique ON rubrique(nom);
 
-CREATE TABLE Produit(
-   id_pro INT AUTO_INCREMENT NOT NULL ,
-   lib_cou_pro VARCHAR(255) NOT NULL ,
-   lib_lon_pro VARCHAR(255) NOT NULL ,
-   ref_fou_pro VARCHAR(255) NOT NULL ,
-   pho_pro VARCHAR(255) NOT NULL ,
-   pri_ach_pro DECIMAL(19,4) NOT NULL ,
-   pri_ht_pro DECIMAL(19,4) NOT NULL ,
-   ctg_pro VARCHAR(255) NOT NULL ,
-   id_rub INT NOT NULL ,
-   id_liv INT DEFAULT NULL ,
-   id_fou INT NOT NULL ,
-   PRIMARY KEY(id_pro),
-   FOREIGN KEY(id_rub) REFERENCES Rubrique(id_rub),
-   FOREIGN KEY(id_liv) REFERENCES Livraison(id_liv),
-   FOREIGN KEY(id_fou) REFERENCES Fournisseur(id_fou),
+CREATE TABLE produit(
+   id INT AUTO_INCREMENT NOT NULL,
+   libelle_court VARCHAR(255) NOT NULL,
+   libelle_long VARCHAR(255) NOT NULL,
+   photo VARCHAR(255) NOT NULL,
+   prix_achat DECIMAL(19,4) NOT NULL,
+   prix_hors_taxe DECIMAL(19,4) NOT NULL,
+   rubrique_id INT NOT NULL,
+   fournisseur_id INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(rubrique_id) REFERENCES rubrique(id),
+   FOREIGN KEY(fournisseur_id) REFERENCES fournisseur(id)
 );
-CREATE INDEX nom_pro ON Produit(lib_cou_pro);
+CREATE INDEX nom_produit ON produit(libelle_court);
 
 
-CREATE TABLE ClientCommercial(
-   id_cli INT NOT NULL ,
-   id_com INT NOT NULL ,
-   PRIMARY KEY(id_cli, id_com),
-   FOREIGN KEY(id_cli) REFERENCES Client(id_cli),
-   FOREIGN KEY(id_com) REFERENCES Commercial(id_com)
+CREATE TABLE livraison_produit(
+   id INT AUTO_INCREMENT NOT NULL ,
+   produit_id INT NOT NULL,
+   livraison_id INT NOT NULL,
+   quantite_produit_livre INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(produit_id) REFERENCES produit(id),
+   FOREIGN KEY(livraison_id) REFERENCES livraison(id)
 );
 
-CREATE TABLE DetailsCommande(
-   id_pro INT NOT NULL ,
-   id_cmd INT NOT NULL ,
-   qte_art INT NOT NULL ,
-   pri_ven DECIMAL(19,4) NOT NULL ,
-   pri_ht DECIMAL(19,4) NOT NULL ,
-   tva_pro DECIMAL(5,2)  NOT NULL ,
-   PRIMARY KEY(id_pro, id_cmd),
-   FOREIGN KEY(id_pro) REFERENCES Produit(id_pro),
-   FOREIGN KEY(id_cmd) REFERENCES Commande(id_cmd)
+
+CREATE TABLE commercial_client(
+   client_id INT NOT NULL ,
+   commercial_id INT NOT NULL ,
+   PRIMARY KEY(commercial_id, client_id),
+   FOREIGN KEY(client_id) REFERENCES client(id),
+   FOREIGN KEY(commercial_id) REFERENCES commercial(id)
+);
+
+CREATE TABLE detail_commande(
+   id INT AUTO_INCREMENT NOT NULL,
+   commande_id INT NOT NULL ,
+   produit_id INT NOT NULL ,
+   quantite_article INT NOT NULL ,
+   prix_vente DECIMAL(19,4) NOT NULL ,
+   prix_hors_taxe DECIMAL(19,4) NOT NULL ,
+   tva_produit DECIMAL(5,2)  NOT NULL ,
+   PRIMARY KEY(id),
+   FOREIGN KEY(produit_id) REFERENCES produit(id),
+   FOREIGN KEY(commande_id) REFERENCES commande(id)
 );

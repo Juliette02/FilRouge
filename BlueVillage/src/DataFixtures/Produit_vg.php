@@ -21,7 +21,6 @@ $produits = array(
 			Conçue en Allemagne
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "TBPro.jpg",
 		"prix_achat" => 36.0000,
 		"prix_hors_taxe" => 46.4000,
@@ -47,7 +46,6 @@ $produits = array(
 			Dimensions: 47 x 61,5 x 41 cm
 			Poids: 22 kg
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "HKA.jpg",
 		"prix_achat" => 400.0000,
 		"prix_hors_taxe" => 495.2000,
@@ -70,7 +68,6 @@ $produits = array(
 			Dimensions: 482 x 757 x 427 mm
 			Poids: 26 kg
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "FBTHX.jpg",
 		"prix_achat" => 575.0000,
 		"prix_hors_taxe" => 639.2000,
@@ -91,7 +88,6 @@ $produits = array(
 			Poids: 298 g
 			Pince, adaptateur de réduction de pas de vis 3/8\" et trousse incl.
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "SM58.jpg",
 		"prix_achat" => 70.0000,
 		"prix_hors_taxe" => 78.4000,
@@ -115,7 +111,6 @@ $produits = array(
 			Dimensions: 182 x 51 mm
 			Câble USB incl.
 		",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "TTBone.jpg",
 		"prix_achat" => 20.0000,
 		"prix_hors_taxe" => 31.2000,
@@ -137,7 +132,6 @@ $produits = array(
 			Pince et trousse inclus
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "E835S.jpg",
 		"prix_achat" => 60.0000,
 		"prix_hors_taxe" => 70.4000,
@@ -168,7 +162,6 @@ $produits = array(
 			Poids : 4,78 kg
 			Kit de montage en rack 19\" inclus
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "X2222USB.jpg",
 		"prix_achat" => 150.0000,
 		"prix_hors_taxe" => 215.2000,
@@ -196,7 +189,6 @@ $produits = array(
 			Dimensions (LxHxP): 265 x 100 x 340 mm
 			Poids: 3,85 kg
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "TTMix.jpg",
 		"prix_achat" => 94.4000,
 		"prix_hors_taxe" => 105.0000,
@@ -223,7 +215,6 @@ $produits = array(
 			Dimensions : 113 x 380 x 388 mm
 			Poids : 5,86 kg
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "12MTK.jpg",
 		"prix_achat" => 300.0000,
 		"prix_hors_taxe" => 355.2000,
@@ -264,7 +255,6 @@ $produits = array(
 			Couleur: Noir
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "FR4XBK.jpg",
 		"prix_achat" => 1900.0000,
 		"prix_hors_taxe" => 2767.2000,
@@ -287,7 +277,6 @@ $produits = array(
 			Bretelles et housse avec sangles sac à dos incl.
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "MKII.jpg",
 		"prix_achat" => 300.0000,
 		"prix_hors_taxe" => 423.2000,
@@ -312,7 +301,6 @@ $produits = array(
 			Bretelles Weltmeister 34/41 Comfort et étui incl.
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "SAPHIR.jpg",
 		"prix_achat" => 2800.0000,
 		"prix_hors_taxe" => 3119.2000,
@@ -338,7 +326,6 @@ $produits = array(
 			Sangle, support, housse et clé d'accordage incl.
 		
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "SALDEL.jpg",
 		"prix_achat" => 3000.0000,
 		"prix_hors_taxe" => 3432.0000,
@@ -360,7 +347,6 @@ $produits = array(
 			Poids: env. 8,3 kg
 		
 		",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "SQB.jpg",
 		"prix_achat" => 300.0000,
 		"prix_hors_taxe" => 398.4000,
@@ -381,7 +367,6 @@ $produits = array(
 			Dimensions: 31 x 19 x 5 cm
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "MLL.jpg",
 		"prix_achat" => 80.0000,
 		"prix_hors_taxe" => 116.0000,
@@ -404,7 +389,6 @@ $produits = array(
 			Housse, archet en composite et colophane incl.
 	
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "111VN.jpg",
 		"prix_achat" => 500.0000,
 		"prix_hors_taxe" => 599.2000,
@@ -428,7 +412,6 @@ $produits = array(
 			Position des cordes pour Slap
 			Couleur: Marron foncé transparent avec bords blancs Vintage
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "DDB.jpg",
 		"prix_achat" => 2000.0000,
 		"prix_hors_taxe" => 2239.2000,
@@ -449,7 +432,6 @@ $produits = array(
 			Couleur: Noir avec graphisme os
 			Archet en composite et housse incl.
 		",
-		"reference_fournisseur" => "Comme Aux Musiques",
 		"photo_produit" => "BKRD.jpg",
 		"prix_achat" => 600.0000,
 		"prix_hors_taxe" => 872.0000,
@@ -483,7 +465,6 @@ $produits = array(
 			Couleur: Satin Black
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "20HSS.jpg",
 		"prix_achat" => 60.0000,
 		"prix_hors_taxe" => 87.2000,
@@ -515,7 +496,6 @@ $produits = array(
 			Livrée en étui tweed noir
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "EBBK.jpg",
 		"prix_achat" => 1200.0000,
 		"prix_hors_taxe" => 1650.0000,
@@ -549,7 +529,6 @@ $produits = array(
 			Livrée en housse
 		
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "MH10.jpg",
 		"prix_achat" => 100.0000,
 		"prix_hors_taxe" => 191.2000,
@@ -582,7 +561,6 @@ $produits = array(
 			Livrée en housse
 		
 		",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "GL2NT.jpg",
 		"prix_achat" => 30.0000,
 		"prix_hors_taxe" => 47.2000,
@@ -607,7 +585,6 @@ $produits = array(
 			Couleur: Rose satin
 		
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "CG851.jpg",
 		"prix_achat" => 22.0000,
 		"prix_hors_taxe" => 30.4000,
@@ -630,7 +607,6 @@ $produits = array(
 			Livrée en housse
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "GL1.jpg",
 		"prix_achat" => 48.0000,
 		"prix_hors_taxe" => 68.0000,
@@ -659,7 +635,6 @@ $produits = array(
 			Couleur: Naturel
 			Livrée en housse Taylor
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "BT2E.jpg",
 		"prix_achat" => 300.0000,
 		"prix_hors_taxe" => 399.2000,
@@ -687,7 +662,6 @@ $produits = array(
 			Fabriquée en République tchèque
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "LJ10.jpg",
 		"prix_achat" => 700.0000,
 		"prix_hors_taxe" => 990.0000,
@@ -716,7 +690,6 @@ $produits = array(
 			Livrée en housse
 		
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "ME2BK.jpg",
 		"prix_achat" => 400.0000,
 		"prix_hors_taxe" => 479.2000,
@@ -738,7 +711,6 @@ $produits = array(
 			Poids: 174 kg
 			Finition: Noir poli
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Yamaha b1 PE.jpg",
 		"prix_achat" => 3075.0000,
 		"prix_hors_taxe" => 3690.0000,
@@ -762,7 +734,6 @@ $produits = array(
 			Avec roulettes , 
 			Finition: Noir brillant 
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Yamaha b3 PE.jpg",
 		"prix_achat" => 4825.0000,
 		"prix_hors_taxe" => 5790.0000,
@@ -785,7 +756,6 @@ $produits = array(
 			Poids: 196 kg
 			Finition: Noir poli
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Kawai K15 E EP.jpg",
 		"prix_achat" => 3325.0000,
 		"prix_hors_taxe" => 3990.0000,
@@ -807,7 +777,6 @@ $produits = array(
 			Finition: Noir poli
 			Banc incl.
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "Kawai GL 10 EP.jpg",
 		"prix_achat" => 9075.0000,
 		"prix_hors_taxe" => 10890.0000,
@@ -829,7 +798,6 @@ $produits = array(
 			Livré avec un banc de piano
 		
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "Yamaha C3X PE.jpg",
 		"prix_achat" => 24990.0000,
 		"prix_hors_taxe" => 29990.0000,
@@ -850,7 +818,6 @@ $produits = array(
 			Finition: Noir mat
 			Banc de haute qualité Andexinger incl.
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "Steinway & Sons B211.jpg",
 		"prix_achat" => 44416.0000,
 		"prix_hors_taxe" => 53300.0000,
@@ -898,7 +865,6 @@ $produits = array(
 			Couleur: Blanc
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Thomann DP95.jpg",
 		"prix_achat" => 4825.0000,
 		"prix_hors_taxe" => 5790.0000,
@@ -932,7 +898,6 @@ $produits = array(
 			Couleur: Anthracite
 			Bloc d'alimentation secteur inclus
 		",
-		"reference_fournisseur" => "Musiques Percussion",
 		"photo_produit" => "Hemingway DP501.jpg",
 		"prix_achat" => 425.0000,
 		"prix_hors_taxe" => 511.0000,
@@ -994,7 +959,6 @@ $produits = array(
 			Adaptateur 6,3 mm incl.
 			Poids: 200 g
 		",
-		"reference_fournisseur" => "Musiques Percussion",
 		"photo_produit" => "Kawai CN29.jpg",
 		"prix_achat" => 1132.0000,
 		"prix_hors_taxe" => 1359.0000,
@@ -1018,7 +982,6 @@ $produits = array(
 			Etui souple avec sangles sac à dos, bec Yamaha 4C, sangle et graisse pour liège incl.
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Yamaha YAS280.jpg",
 		"prix_achat" => 825.0000,
 		"prix_hors_taxe" => 990.0000,
@@ -1042,7 +1005,6 @@ $produits = array(
 			Etui souple avec sangles sac à dos incl.
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Thomann TAS180.jpg",
 		"prix_achat" => 248.0000,
 		"prix_hors_taxe" => 298.0000,
@@ -1063,7 +1025,6 @@ $produits = array(
 			Bec et étui souple incl.
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Startone SAS75.jpg",
 		"prix_achat" => 224.0000,
 		"prix_hors_taxe" => 269.0000,
@@ -1085,7 +1046,6 @@ $produits = array(
 			Embouchure 7C et étui incl.
 		
 		",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "Thomann TR5BB.jpg",
 		"prix_achat" => 107.5000,
 		"prix_hors_taxe" => 129.0000,
@@ -1110,7 +1070,6 @@ $produits = array(
 			Embouchure 7C et étui souple avec sangles sac à dos incl.
 		
 		",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "Thomann TR200BB.jpg",
 		"prix_achat" => 132.5000,
 		"prix_hors_taxe" => 159.0000,
@@ -1141,7 +1100,6 @@ $produits = array(
 			Housse Bach SPS avec sangles sac à dos et embouchure Vincent Bach 7C incl.
 		
 		 ",
-		"reference_fournisseur" => "Le Musique en ville",
 		"photo_produit" => "Bach TR450S.jpg",
 		"prix_achat" => 640.0000,
 		"prix_hors_taxe" => 769.0000,
@@ -1164,7 +1122,6 @@ $produits = array(
 			Livré en coffret cadeau
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Thomann 12H.jpg",
 		"prix_achat" => 16.5000,
 		"prix_hors_taxe" => 19.9000,
@@ -1185,7 +1142,6 @@ $produits = array(
 			Tablature et trousse incl.
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Thomann ACStein.jpg",
 		"prix_achat" => 82.5000,
 		"prix_hors_taxe" => 99.0000,
@@ -1206,7 +1162,6 @@ $produits = array(
 			Couleur: Bleu royal
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Thomann Zfan.jpg",
 		"prix_achat" => 45.8000,
 		"prix_hors_taxe" => 55.0000,
@@ -1227,7 +1182,6 @@ $produits = array(
 			Etui et écouvillon incl.
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Thomann FL200.jpg",
 		"prix_achat" => 132.5000,
 		"prix_hors_taxe" => 159.0000,
@@ -1249,7 +1203,6 @@ $produits = array(
 			Etui et écouvillon incl.
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Muramatsu EX.jpg",
 		"prix_achat" => 3333.0000,
 		"prix_hors_taxe" => 3999.0000,
@@ -1273,7 +1226,6 @@ $produits = array(
 			Etui et accessoires incl.
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Pearl PF505.jpg",
 		"prix_achat" => 462.0000,
 		"prix_hors_taxe" => 555.0000,
@@ -1294,7 +1246,6 @@ $produits = array(
 			Dimensions: 280 x 280 x 410mm
 			Poids sans ampoule: 5 kg
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "ETC.jpg",
 		"prix_achat" => 150.0000,
 		"prix_hors_taxe" => 256.8000,
@@ -1318,7 +1269,6 @@ $produits = array(
 			Indice de protection: IP20
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Eurolite.jpg",
 		"prix_achat" => 1200.0000,
 		"prix_hors_taxe" => 1500.0000,
@@ -1353,7 +1303,6 @@ $produits = array(
 			Poids : 13,7 kg
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Cameo.jpg",
 		"prix_achat" => 400.0000,
 		"prix_hors_taxe" => 431.2000,
@@ -1384,7 +1333,6 @@ $produits = array(
 			Poids: 1,05 kg
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Stairville.jpg",
 		"prix_achat" => 50.0000,
 		"prix_hors_taxe" => 63.2000,
@@ -1420,7 +1368,6 @@ $produits = array(
 			Poids: 7,8 kg
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Martin.jpg",
 		"prix_achat" => 1900.0000,
 		"prix_hors_taxe" => 2318.4000,
@@ -1449,7 +1396,6 @@ $produits = array(
 			Dimensions: 476 x 241 x 88 mm
 			Poids: 3,9 kg
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Varytec.jpg",
 		"prix_achat" => 100.0000,
 		"prix_hors_taxe" => 141.6000,
@@ -1484,7 +1430,6 @@ $produits = array(
 			Licence de logiciel Showeditor version complète incluse
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Laserworld.jpg",
 		"prix_achat" => 500.0000,
 		"prix_hors_taxe" => 596.0000,
@@ -1516,7 +1461,6 @@ $produits = array(
 			Attention: Cet appareil contient un laser de classe 3R (classification selon la norme DIN EN 60825-1:2007)
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "ADj.jpg",
 		"prix_achat" => 150.0000,
 		"prix_hors_taxe" => 172.0000,
@@ -1550,7 +1494,6 @@ $produits = array(
 			Livré avec étui en plastique étanche
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Laserworld1.jpg",
 		"prix_achat" => 1900.0000,
 		"prix_hors_taxe" => 2199.2000,
@@ -1585,7 +1528,6 @@ $produits = array(
 			Dimensions : 300 x 350 x 20 mm
 			Couleur : noir / vert néon
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Gravity.jpg",
 		"prix_achat" => 40.0000,
 		"prix_hors_taxe" => 61.6000,
@@ -1609,7 +1551,6 @@ $produits = array(
 			Couleur: Noir
 		
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Roadworx.jpg",
 		"prix_achat" => 200.0000,
 		"prix_hors_taxe" => 231.2000,
@@ -1630,7 +1571,6 @@ $produits = array(
 			Supporte une charge max. (selon le fabricant) de 37 kg
 		
 		",
-		"reference_fournisseur" => "Musique",
 		"photo_produit" => "Standback.jpg",
 		"prix_achat" => 15.0000,
 		"prix_hors_taxe" => 23.2000,
@@ -1649,7 +1589,6 @@ $produits = array(
 			Hauteur réglable par tige filetée d'env. 52 à env. 65 cm
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Millenium.jpg",
 		"prix_achat" => 50.0000,
 		"prix_hors_taxe" => 55.2000,
@@ -1670,7 +1609,6 @@ $produits = array(
 			Trépied double embase
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Mapex.jpg",
 		"prix_achat" => 100.0000,
 		"prix_hors_taxe" => 127.2000,
@@ -1688,7 +1626,6 @@ $produits = array(
 			Quadripode double embase
 			Hauteur réglable par système pneumatique de 510 à 690 mm
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "DW.jpg",
 		"prix_achat" => 200.0000,
 		"prix_hors_taxe" => 255.2000,
@@ -1715,7 +1652,6 @@ $produits = array(
 			Poids du casque: 320 g
 			Emetteur WL-T et un câble micro USB incl.
 		",
-		"reference_fournisseur" => "Vivre Art Loux",
 		"photo_produit" => "Boss.jpg",
 		"prix_achat" => 250.0000,
 		"prix_hors_taxe" => 303.2000,
@@ -1737,7 +1673,6 @@ $produits = array(
 			Coussinets d'oreille remplis de gel
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Metrophones.jpg",
 		"prix_achat" => 120.0000,
 		"prix_hors_taxe" => 168.8000,
@@ -1765,7 +1700,6 @@ $produits = array(
 			Adaptateur 3,5/6,3mm et trousse incl.
 		
 		",
-		"reference_fournisseur" => "Le musique en ville",
 		"photo_produit" => "Superlux.jpg",
 		"prix_achat" => 10.0000,
 		"prix_hors_taxe" => 18.0800,
@@ -1805,7 +1739,6 @@ $produits = array(
 			Crash 16\"
 			Ride 20\"
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Pearl.jpg",
 		"prix_achat" => 450.0000,
 		"prix_hors_taxe" => 599.2000,
@@ -1842,7 +1775,6 @@ $produits = array(
 			Peaux de résonance grosse caisse: Remo Fiberskyn Powerstroke 3 Diplomat
 			Couleur: White Ebony (NWE)
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Tama.jpg",
 		"prix_achat" => 6000.0000,
 		"prix_hors_taxe" => 7199.2000,
@@ -1865,7 +1797,6 @@ $produits = array(
 			Adaptateur \"réhausseur\" de grosse caisse et support de cymbale/tom incl.
 			Couleur: Blue Ocean Sparkle (BOS)
 		",
-		"reference_fournisseur" => "La musique en ville",
 		"photo_produit" => "Sonor.jpg",
 		"prix_achat" => 350.0000,
 		"prix_hors_taxe" => 399.2000,
@@ -1906,7 +1837,6 @@ $produits = array(
 			3 processeurs multi-effets avec 30 algorithmes
 			Multi-compresseur 2 bandes et EQ 4 bandes pour les sorties
 		",
-		"reference_fournisseur" => "Comme aux Musiques",
 		"photo_produit" => "Roland.jpg",
 		"prix_achat" => 6000.0000,
 		"prix_hors_taxe" => 6872.0000,
@@ -1945,7 +1875,6 @@ $produits = array(
 			USB MIDI
 			Entrée et sortie MIDI
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Alesis.jpg",
 		"prix_achat" => 1500.0000,
 		"prix_hors_taxe" => 1887.2000,
@@ -1975,7 +1904,6 @@ $produits = array(
 			Câblage, siège, casque, paire de baguettes, support de baguettes et bloc d'alimentation (100-240V) incl.
 		
 		",
-		"reference_fournisseur" => "Musique Percussion",
 		"photo_produit" => "Millenium1.jpg",
 		"prix_achat" => 100.0000,
 		"prix_hors_taxe" => 158.4000,

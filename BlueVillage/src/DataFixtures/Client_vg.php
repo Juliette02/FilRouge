@@ -2,6 +2,7 @@
 $clients = array(
 	array(
 		"id" => 7,
+		"id_user_id" => 2,
 		"categorie_client" => "Particulier",
 		"adresse_livraison_client" => "1 rue des tests",
 		"cp_livraison_client" => "12345",

@@ -67,7 +67,7 @@
 
             <a href="{{ path('app_client') }}" class="btn btn-outline-info mt-5 text-dark w-50 align-self-center">Mon profil</a>
 
-            <a href="#" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Mes commandes</a>
+            <a href="{{ path('app_commande_index') }}" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Mes commandes</a>
 
             <a href="{{ path('app_logout') }}" class="btn btn-outline-danger text-dark mt-5 w-50 align-self-center">Déconnexion</a>
         </div>
@@ -79,7 +79,7 @@
 
             <a href="{{ path('app_user_index') }}" class="btn btn-outline-info mt-5 text-dark w-50 align-self-center">Profil Clients</a>
 
-            <a href="#" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Commandes Clients</a>
+            <a href="{{ path('app_commande_index') }}" class="btn btn-outline-success mt-5 text-dark w-50 align-self-center">Commandes Clients</a>
 
             <a href="{{ path('app_logout') }}" class="btn btn-outline-danger text-dark mt-5 w-50 align-self-center">Déconnexion</a>
         </div>
@@ -129,12 +129,15 @@ Vous n'avez pas de compte ?<a href="{{ path('app_register') }}"> Inscivez-vous !
                         </li>
                     </ul>
                     </div>
-                    {% endfor %}
+                {% endfor %}
                 </div>
             </nav>
 
 
         {% endblock %}
+
+            {% block commande %}
+            {% endblock %}
 
             {% block rubrique %}
             {% endblock %}
