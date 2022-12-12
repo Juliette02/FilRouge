@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Client;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class ClientType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder
+            ->add('categorie')
+            ->add('adresseLivraison')
+            ->add('cpLivraison')
+            ->add('villeLivraison')
+            ->add('adresseFacture')
+            ->add('cpFacture')
+            ->add('villeFacture')
+            ->add('modePaiement')
+            ->add('reduction')
+            ->add('coefficient')
+            ->add('numeroSiret')
+            ->add('nom')
+            ->add('prenom')
+            ->add('nomEntreprise')
+            ->add('commercials')
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Client::class,
+        ]);
+    }
+}

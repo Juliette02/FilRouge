@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block clients %}
+
+<div class="container">
+<div class="row">
+<div class="col-12 d-flex justify-content-center">
+    <h2>Espace Clients</h2>
+    </div>
+    <div class="col-12 d-flex">
+
+        <form class="form-control" id="formespaceclient">
+            <label for="nom" class="form-label">Nom</label>
+            <input class="form-control" id="nom" type="text" value="{{ app.user.client.nom }}" disabled ><br/>
+
+            <label for="prenom" class="form-label">Prénom</label><br/>
+            <input class="form-control" type="text" id="prenom" value="{{ app.user.client.prenom }}" disabled><br/>
+
+            <label for="email" class="form-label">E-mail</label><br/>
+            <input class="form-control" type="mail" id="email" value="{{ app.user.email }}" disabled><br/>
+
+            <label for="adl" class="form-label">Adresse</label><br/>
+            <input class="form-control" type="text" id="adl" value="{{ app.user.client.adresseLivraison }}" disabled><br/>
+
+            <label for="cp" class="form-label">Code Postal</label><br/>
+            <input class="form-control" type="number" id="cp" value="{{ app.user.client.cpLivraison }}" disabled><br/>
+
+            <label for="ville" class="form-label">Ville</label><br/>
+            <input class="form-control" type="text" id="ville" value="{{ app.user.client.villeLivraison }}" disabled><br/>
+
+            <label for="paiement" class="form-label">Mode de paiement</label><br/>
+            <input class="form-control" type="text" id="paiement" value="{{ app.user.client.modePaiement }}" disabled><br/>
+
+            {% if app.user.client.categorie == "Professionnel" %}
+                <label for="adf" class="form-label">Adresse de facturation</label><br/>
+                <input class="form-control" type="text" id="adf" value="{{ app.user.client.adresseFacture }}" disabled><br/>
+
+                <label for="cpf" class="form-label">Code postale de facturation</label><br/>
+                <input class="form-control" type="text" id="cpf" value="{{ app.user.client.cpFacture }}" disabled><br/>
+
+                <label for="vdf" class="form-label">Ville de facturation</label><br/>
+                <input class="form-control" type="text" id="vdf" value="{{ app.user.client.villeFacture }}" disabled><br/>
+
+                <label for="siret" class="form-label">N° de SIRET</label><br/>
+                <input class="form-control" type="text" id="siret" value="{{ app.user.client.numeroSiret }}" disabled><br/>
+
+                <label for="entreprise" class="form-label">Nom de l'entreprise</label><br/>
+                <input class="form-control" type="text" id="entreprise" value="{{ app.user.client.nomEntreprise }}" disabled><br/>
+            {% endif %}
+        </form>
+    </div>
+    </div>
+    </div>
+{% endblock %}
+
